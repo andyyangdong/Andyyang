@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Hexo</title>
   
-  
+  <subtitle>恭自厚而薄责与人</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-09-12T02:02:13.000Z</updated>
+  <updated>2017-09-12T01:05:48.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,27 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title></title>
-    <link href="http://yoursite.com/2017/09/12/9-12/"/>
-    <id>http://yoursite.com/2017/09/12/9-12/</id>
-    <published>2017-09-12T02:02:13.000Z</published>
-    <updated>2017-09-12T02:02:13.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="信息整理"><a href="#信息整理" class="headerlink" title="信息整理"></a>信息整理</h1><h2 id="PM"><a href="#PM" class="headerlink" title="PM"></a>PM</h2><pre><code class="bash">1.信息梳理</code></pre><h2 id="AI"><a href="#AI" class="headerlink" title="AI"></a>AI</h2><pre><code class="bash">1.前沿科技</code></pre><h2 id="entrepreneurship"><a href="#entrepreneurship" class="headerlink" title="entrepreneurship"></a>entrepreneurship</h2><pre><code class="bash">1.direction</code></pre><h2 id="Science-and-technology"><a href="#Science-and-technology" class="headerlink" title="Science and technology"></a>Science and technology</h2><pre><code class="bash">1.</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;信息整理&quot;&gt;&lt;a href=&quot;#信息整理&quot; class=&quot;headerlink&quot; title=&quot;信息整理&quot;&gt;&lt;/a&gt;信息整理&lt;/h1&gt;&lt;h2 id=&quot;PM&quot;&gt;&lt;a href=&quot;#PM&quot; class=&quot;headerlink&quot; title=&quot;PM&quot;&gt;&lt;/a&gt;PM&lt;/h
-      
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>OC</title>
@@ -78,6 +57,34 @@
     
     </summary>
     
+    
+  </entry>
+  
+  <entry>
+    <title>旧事 神海 8.7-8.13</title>
+    <link href="http://yoursite.com/2016/08/14/9-12/"/>
+    <id>http://yoursite.com/2016/08/14/9-12/</id>
+    <published>2016-08-14T02:36:00.000Z</published>
+    <updated>2017-09-12T07:24:49.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="信息整理"><a href="#信息整理" class="headerlink" title="信息整理"></a>信息整理</h1><h2 id="PM"><a href="#PM" class="headerlink" title="PM"></a>PM</h2><pre><code class="bash">1.信息梳理</code></pre><h2 id="AI"><a href="#AI" class="headerlink" title="AI"></a>AI</h2><pre><code class="bash">1.前沿科技</code></pre><h2 id="ES"><a href="#ES" class="headerlink" title="ES"></a>ES</h2><pre><code class="bash">1.direction</code></pre><h2 id="ST"><a href="#ST" class="headerlink" title="ST"></a>ST</h2><pre><code class="bash">1.</code></pre><p>对于一张网页，我们往往希望它是结构良好，内容清晰的，这样搜索引擎才能准确地认知它。<br>而反过来，又有一些情景，我们不希望内容能被轻易获取，比方说电商网站的交易额，教育网站的题目等。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。这就是爬虫与反爬虫这一话题的由来。<br><a id="more"></a><br>对于一张网页，我们往往希望它是结构良好，内容清晰的，这样搜索引擎才能准确地认知它。<br>而反过来，又有一些情景，我们不希望内容能被轻易获取，比方说电商网站的交易额，教育网站的题目等。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。这就是爬虫与反爬虫这一话题的由来。</p><table><thead><tr><th>项目</th><th style="text-align:right">价格</th><th style="text-align:center">数量</th></tr></thead><tbody><tr><td>计算机</td><td style="text-align:right">\$1600</td><td style="text-align:center">5</td></tr><tr><td>手机</td><td style="text-align:right">\$12</td><td style="text-align:center">12</td></tr><tr><td>管线</td><td style="text-align:right">\$1</td><td style="text-align:center">234</td></tr><tr><td>计算机</td><td style="text-align:right">\$1600</td><td style="text-align:center">5</td></tr><tr><td>手机</td><td style="text-align:right">\$12</td><td style="text-align:center">12</td></tr><tr><td>管线</td><td style="text-align:right">\$1</td><td style="text-align:center">234</td></tr><tr><td>计算机</td><td style="text-align:right">\$1600</td><td style="text-align:center">5</td></tr><tr><td>手机</td><td style="text-align:right">\$12</td><td style="text-align:center">12</td></tr><tr><td>管线</td><td style="text-align:right">\$1</td><td style="text-align:center">234</td></tr><tr><td>计算机</td><td style="text-align:right">\$1600</td><td style="text-align:center">5</td></tr><tr><td>手机</td><td style="text-align:right">\$12</td><td style="text-align:center">12</td></tr><tr><td>管线</td><td style="text-align:right">\$1</td><td style="text-align:center">234</td></tr><tr><td>计算机</td><td style="text-align:right">\$1600</td><td style="text-align:center">5</td></tr><tr><td>手机</td><td style="text-align:right">\$12</td><td style="text-align:center">12</td></tr><tr><td>管线</td><td style="text-align:right">\$1</td><td style="text-align:center">234</td></tr><tr><td>计算机</td><td style="text-align:right">\$1600</td><td style="text-align:center">5</td></tr><tr><td>手机</td><td style="text-align:right">\$12</td><td style="text-align:center">12</td></tr><tr><td>管线</td><td style="text-align:right">\$1</td><td style="text-align:center">234</td></tr><tr><td>计算机</td><td style="text-align:right">\$1600</td><td style="text-align:center">5</td></tr><tr><td>手机</td><td style="text-align:right">\$12</td><td style="text-align:center">12</td></tr><tr><td>管线</td><td style="text-align:right">\$1</td><td style="text-align:center">234</td></tr><tr><td>计算机</td><td style="text-align:right">\$1600</td><td style="text-align:center">5</td></tr><tr><td>手机</td><td style="text-align:right">\$12</td><td style="text-align:center">12</td></tr><tr><td>管线</td><td style="text-align:right">\$1</td><td style="text-align:center">234</td></tr></tbody></table>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;信息整理&quot;&gt;&lt;a href=&quot;#信息整理&quot; class=&quot;headerlink&quot; title=&quot;信息整理&quot;&gt;&lt;/a&gt;信息整理&lt;/h1&gt;&lt;h2 id=&quot;PM&quot;&gt;&lt;a href=&quot;#PM&quot; class=&quot;headerlink&quot; title=&quot;PM&quot;&gt;&lt;/a&gt;PM&lt;/h2&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;1.信息梳理
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;AI&quot;&gt;&lt;a href=&quot;#AI&quot; class=&quot;headerlink&quot; title=&quot;AI&quot;&gt;&lt;/a&gt;AI&lt;/h2&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;1.前沿科技
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;ES&quot;&gt;&lt;a href=&quot;#ES&quot; class=&quot;headerlink&quot; title=&quot;ES&quot;&gt;&lt;/a&gt;ES&lt;/h2&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;1.direction
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;ST&quot;&gt;&lt;a href=&quot;#ST&quot; class=&quot;headerlink&quot; title=&quot;ST&quot;&gt;&lt;/a&gt;ST&lt;/h2&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;1.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;对于一张网页，我们往往希望它是结构良好，内容清晰的，这样搜索引擎才能准确地认知它。&lt;br&gt;而反过来，又有一些情景，我们不希望内容能被轻易获取，比方说电商网站的交易额，教育网站的题目等。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。这就是爬虫与反爬虫这一话题的由来。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="旧事" scheme="http://yoursite.com/tags/%E6%97%A7%E4%BA%8B/"/>
     
   </entry>
   
