@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hexo</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2017-09-12T02:02:13.000Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>andy</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/09/12/9-12/"/>
+    <id>http://yoursite.com/2017/09/12/9-12/</id>
+    <published>2017-09-12T02:02:13.000Z</published>
+    <updated>2017-09-12T02:02:13.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="信息整理"><a href="#信息整理" class="headerlink" title="信息整理"></a>信息整理</h1><h2 id="PM"><a href="#PM" class="headerlink" title="PM"></a>PM</h2><pre><code class="bash">1.信息梳理</code></pre><h2 id="AI"><a href="#AI" class="headerlink" title="AI"></a>AI</h2><pre><code class="bash">1.前沿科技</code></pre><h2 id="entrepreneurship"><a href="#entrepreneurship" class="headerlink" title="entrepreneurship"></a>entrepreneurship</h2><pre><code class="bash">1.direction</code></pre><h2 id="Science-and-technology"><a href="#Science-and-technology" class="headerlink" title="Science and technology"></a>Science and technology</h2><pre><code class="bash">1.</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;信息整理&quot;&gt;&lt;a href=&quot;#信息整理&quot; class=&quot;headerlink&quot; title=&quot;信息整理&quot;&gt;&lt;/a&gt;信息整理&lt;/h1&gt;&lt;h2 id=&quot;PM&quot;&gt;&lt;a href=&quot;#PM&quot; class=&quot;headerlink&quot; title=&quot;PM&quot;&gt;&lt;/a&gt;PM&lt;/h
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>OC</title>
+    <link href="http://yoursite.com/2017/09/11/Project/"/>
+    <id>http://yoursite.com/2017/09/11/Project/</id>
+    <published>2017-09-11T03:12:36.000Z</published>
+    <updated>2017-09-12T01:05:48.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>这是一篇关于平时关于项目搜集的项目集</p><h2 id="项目"><a href="#项目" class="headerlink" title="项目"></a>项目</h2><p>介绍：其中涵盖了系统架构，应用组件，IM,实施项目</p><h3 id="系统架构"><a href="#系统架构" class="headerlink" title="系统架构"></a>系统架构</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">系统架构</div></pre></td></tr></table></figure><h3 id="系统架构-1"><a href="#系统架构-1" class="headerlink" title="系统架构"></a>系统架构</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">应用组件</div></pre></td></tr></table></figure><h3 id="实施项目"><a href="#实施项目" class="headerlink" title="实施项目"></a>实施项目</h3><pre><code class="bash">实施项目</code></pre><p>项目整理  底层技术  区块链技术 比特币 人 场景  封闭  </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;这是一篇关于平时关于项目搜集的项目集&lt;/p&gt;
+&lt;h2 id=&quot;项目&quot;&gt;&lt;a href=&quot;#项目&quot; class=&quot;headerlink&quot; title=&quot;项目&quot;&gt;&lt;/a&gt;项目&lt;/h2&gt;&lt;p&gt;介绍：其中涵盖了系统架构，应用组件，IM,实施项目&lt;/p&gt;
+&lt;h3 id=&quot;系统架构&quot;&gt;
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2017/09/06/hello-world/"/>
+    <id>http://yoursite.com/2017/09/06/hello-world/</id>
+    <published>2017-09-06T02:38:21.000Z</published>
+    <updated>2017-09-12T03:15:07.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
