@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-09-12T01:05:48.000Z</updated>
+  <updated>2017-09-13T02:35:56.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,74 +17,102 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>OC</title>
-    <link href="http://yoursite.com/2017/09/11/Project/"/>
-    <id>http://yoursite.com/2017/09/11/Project/</id>
-    <published>2017-09-11T03:12:36.000Z</published>
-    <updated>2017-09-12T01:05:48.000Z</updated>
+    <title>模版格式</title>
+    <link href="http://yoursite.com/2018/09/12/9-12/"/>
+    <id>http://yoursite.com/2018/09/12/9-12/</id>
+    <published>2018-09-11T16:00:00.000Z</published>
+    <updated>2017-09-13T02:35:56.000Z</updated>
     
-    <content type="html"><![CDATA[<p>这是一篇关于平时关于项目搜集的项目集</p><h2 id="项目"><a href="#项目" class="headerlink" title="项目"></a>项目</h2><p>介绍：其中涵盖了系统架构，应用组件，IM,实施项目</p><h3 id="系统架构"><a href="#系统架构" class="headerlink" title="系统架构"></a>系统架构</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">系统架构</div></pre></td></tr></table></figure><h3 id="系统架构-1"><a href="#系统架构-1" class="headerlink" title="系统架构"></a>系统架构</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">应用组件</div></pre></td></tr></table></figure><h3 id="实施项目"><a href="#实施项目" class="headerlink" title="实施项目"></a>实施项目</h3><pre><code class="bash">实施项目</code></pre><p>项目整理  底层技术  区块链技术 比特币 人 场景  封闭  </p>]]></content>
+    <content type="html"><![CDATA[<p>对于diary，我们往往希望它是结构良好，内容清晰的。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。<br><a id="more"></a></p><h2 id="待办事项"><a href="#待办事项" class="headerlink" title="待办事项"></a>待办事项</h2><ul><li style="list-style: none"><input type="checkbox"> PM</li><li style="list-style: none"><input type="checkbox"> ST</li><li style="list-style: none"><input type="checkbox"> AI</li><li style="list-style: none"><input type="checkbox"> ES</li><li style="list-style: none"><input type="checkbox"> MS</li><li style="list-style: none"><input type="checkbox"> other</li></ul><h2 id="PM"><a href="#PM" class="headerlink" title="PM"></a>PM</h2><pre><code class="bash">1.信息梳理</code></pre><h2 id="AI"><a href="#AI" class="headerlink" title="AI"></a>AI</h2><pre><code class="bash">1.前沿科技</code></pre><h2 id="ES"><a href="#ES" class="headerlink" title="ES"></a>ES</h2><pre><code class="bash">1.direction</code></pre><h2 id="ST"><a href="#ST" class="headerlink" title="ST"></a>ST</h2><pre><code class="bash">1.</code></pre><h2 id="MS"><a href="#MS" class="headerlink" title="MS"></a>MS</h2><pre><code class="bash">1.</code></pre>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;这是一篇关于平时关于项目搜集的项目集&lt;/p&gt;
-&lt;h2 id=&quot;项目&quot;&gt;&lt;a href=&quot;#项目&quot; class=&quot;headerlink&quot; title=&quot;项目&quot;&gt;&lt;/a&gt;项目&lt;/h2&gt;&lt;p&gt;介绍：其中涵盖了系统架构，应用组件，IM,实施项目&lt;/p&gt;
-&lt;h3 id=&quot;系统架构&quot;&gt;
-      
+      &lt;p&gt;对于diary，我们往往希望它是结构良好，内容清晰的。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。&lt;br&gt;
     
     </summary>
     
     
+      <category term="diary" scheme="http://yoursite.com/tags/diary/"/>
+    
   </entry>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2017/09/06/hello-world/"/>
-    <id>http://yoursite.com/2017/09/06/hello-world/</id>
-    <published>2017-09-06T02:38:21.000Z</published>
-    <updated>2017-09-12T03:15:07.000Z</updated>
+    <title>09-14</title>
+    <link href="http://yoursite.com/2017/09/14/9-14/"/>
+    <id>http://yoursite.com/2017/09/14/9-14/</id>
+    <published>2017-09-13T16:00:00.000Z</published>
+    <updated>2017-09-14T03:20:56.000Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<p>对于diary，我们往往希望它是结构良好，内容清晰的。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。<br><a id="more"></a></p><h2 id="待办事项"><a href="#待办事项" class="headerlink" title="待办事项"></a>待办事项</h2><ul><li style="list-style: none"><input type="checkbox"> 博客共享浏览</li><li style="list-style: none"><input type="checkbox"> RXswift框架了解</li><li style="list-style: none"><input type="checkbox"> 周末计划</li><li style="list-style: none"><input type="checkbox"> 信息浏览</li><li style="list-style: none"><input type="checkbox"> MS</li><li style="list-style: none"><input type="checkbox"> other</li></ul><h2 id="PM"><a href="#PM" class="headerlink" title="PM"></a>PM</h2><pre><code class="bash">1.信息梳理</code></pre><p><a href="http://www.woshipm.com/pmd/787542.html" target="_blank" rel="external">产品跟进</a><br>1.项目前评审<br>2.产生PRD需求文档<br>3.原型，需求开发评审<br>4.项目跟进，进度把控</p><blockquote><ul><li>需求说明（场景化）</li><li>砍需求 ：坚持核心功能点，二期优化润色功能，适当砍掉可有可无的功能，放弃意淫功能</li><li>建议需求：与原有思路相同，相互交流 2.新概念点，先了解回去思考给结果（文档形式）</li><li>工作量评估：与项目经理紧密沟通：落实给到确切的时间排期表（让了解需求）</li></ul></blockquote><ol><li>测试跟进</li><li>产品验收</li></ol><h2 id="AI"><a href="#AI" class="headerlink" title="AI"></a>AI</h2><pre><code class="bash">1.前沿科技</code></pre><h2 id="ES"><a href="#ES" class="headerlink" title="ES"></a>ES</h2><pre><code class="bash">1.direction</code></pre><h2 id="ST"><a href="#ST" class="headerlink" title="ST"></a>ST</h2><pre><code class="bash">1.</code></pre><h2 id="MS"><a href="#MS" class="headerlink" title="MS"></a>MS</h2><pre><code class="bash">1.</code></pre>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-      
+      &lt;p&gt;对于diary，我们往往希望它是结构良好，内容清晰的。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。&lt;br&gt;
     
     </summary>
     
     
+      <category term="diary" scheme="http://yoursite.com/tags/diary/"/>
+    
   </entry>
   
   <entry>
-    <title>旧事 神海 8.7-8.13</title>
-    <link href="http://yoursite.com/2016/08/14/9-12/"/>
-    <id>http://yoursite.com/2016/08/14/9-12/</id>
+    <title>09-13</title>
+    <link href="http://yoursite.com/2017/09/13/9-13/"/>
+    <id>http://yoursite.com/2017/09/13/9-13/</id>
+    <published>2017-09-12T16:00:00.000Z</published>
+    <updated>2017-09-14T01:35:03.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>对于diary，我们往往希望它是结构良好，内容清晰的。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。<br><a id="more"></a></p><ul><li style="list-style: none"><input type="checkbox" checked> 苹果发布会，iPhone x 新特性了解</li><li style="list-style: none"><input type="checkbox"> RXSWift 项目语法了解</li><li style="list-style: none"><input type="checkbox"> 产品知识储备</li><li style="list-style: none"><input type="checkbox"> 3L5T 了解落实一个方向</li><li style="list-style: none"><input type="checkbox"> 创业感觉维持</li><li style="list-style: none"><input type="checkbox"> 其他工作事项</li></ul><h2 id="PM"><a href="#PM" class="headerlink" title="PM"></a>PM</h2><pre><code class="bash">1.信息梳理</code></pre><p>需要做产品就要做颠覆式创新产品<br>朱波提醒创业者，做产品就要做颠覆式创新产品，巨头们可以做渐进式产品，但如果创业者在别人的产品上做微改良、微创新，想要超越别人是很难的。<br>此外，他强调，创新原型不用精致，但要针对用户的痛点，开发产品的主要功能，这一步实现后，要将产品迅速投放到市场，先行验证，快速试错。如果主要功能不被认可，尽管后期不断添加零零散散的附加功能，不断完善，最后升级为一艘「航空母舰」，恐怕也用户不会买账。他表示，产品和市场要尽快结合，找到市场突破点，这步做到了，后续的融资、财务战略规划等问题都能够迎刃而解了，因为你一旦有了数据，就很容易征服看重数据的投资人。<br>但翻开硬币的另一面，如果产品面向B端市场，工匠之心不可少。由于B端企业数量有限，意味着试错机会几乎为零。创业者需要找到企业的核心痛点，用工匠之心精细化打磨产品后，再投放到市场上，胜算较大。</p><p>从消费电子到文化娱乐全方位的消费升级：个性化元素</p><h2 id="AI"><a href="#AI" class="headerlink" title="AI"></a>AI</h2><pre><code class="bash">1.前沿科技</code></pre><p>人工智能与场景相结合</p><h2 id="ES"><a href="#ES" class="headerlink" title="ES"></a>ES</h2><pre><code class="bash">1.direction</code></pre><p><code>势、事、人</code>：「抓住趋势、找准痛点、做自己擅长的事情是创业成功的秘诀」</p><blockquote><ul><li>布局的节奏很重要</li><li>所谓投事情，就是要满足「刚需、高频、粘性」三个条件</li><li>所谓投人，即创业者的资源、背景可以支撑他要做的事情，而非超出他的能力范围之外。朱波强调，创业者的能力和认知边界决定了企业的天花板</li></ul></blockquote><p>前期采用扁平化管理：在公司没有成为行业领袖、绝对标杆之前，采用扁平化管理方式，让每个人将自己的优势发挥到淋漓尽致，才是企业的生存之道。</p><h2 id="ST"><a href="#ST" class="headerlink" title="ST"></a>ST</h2><pre><code class="bash">1.</code></pre><p><code>Iphone X</code>：引领一种新时尚？ </p><blockquote><blockquote><ul><li>1.人脸解锁：AI针对于脸部的信息采集，比原先的Touch id 的出错概率降低10% </li><li>2.无线充电：技术壁垒并不高，没有实现无线快冲而且也没有及时发布相应的产品</li><li>3.AR场景: 双摄像头，立体成像（适合开发场景）</li></ul></blockquote></blockquote><h2 id="MS"><a href="#MS" class="headerlink" title="MS"></a>MS</h2><pre><code class="bash">1.direction</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;对于diary，我们往往希望它是结构良好，内容清晰的。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="diary" scheme="http://yoursite.com/tags/diary/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>09-12</title>
+    <link href="http://yoursite.com/2017/09/12/9.12/"/>
+    <id>http://yoursite.com/2017/09/12/9.12/</id>
+    <published>2017-09-11T16:00:00.000Z</published>
+    <updated>2017-09-12T10:14:11.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>对于diary，我们往往希望它是结构良好，内容清晰的。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。<br><a id="more"></a></p><h2 id="PM"><a href="#PM" class="headerlink" title="PM"></a>PM</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">1.信息梳理</div><div class="line">``` </div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">## AI</span></div><div class="line"></div><div class="line">``` bash</div><div class="line">1.前沿科技</div></pre></td></tr></table></figure><p><code>AI潜在危险</code> <a href="https://baijia.baidu.com/s?id=1578221799289033365&amp;wfr=pc&amp;fr=idx_lst&amp;wfr=pc&amp;fr=idx_sl" target="_blank" rel="external">链接</a></p><blockquote><ul><li>1.决策中选择出乎意料的潜在危险<br>  <em>美国的大学（应该是MIT）举办了一场机器人大赛。参赛团队需要设计一个机器人，任务是把羊（也是机器的）抓到自己的羊圈里。机器人需要自主思考并执行策略，抓羊最多的才能赢得比赛。<br>   比赛开始，机器人开始疯狂的捉羊。但是，有个机器人只捉了一只羊，就关上了羊圈的门。随后，可怕的事情发生了。这个机器人开始摧毁其他的参赛对手。它的策略是，根本不用捉羊，把对手消灭掉就赢了。</em></li><li>2.自我意思的高于指令<br>   <em>无人机没有在舰上着陆，而是选择降落在附近的Wallops岛空军基地。在AI看来，这个地点降落可能是更安全的选择。也就是说，这个AI认为自己的决定比人类的指令优先级更高。在我看来，这是迄今为止最接近天网的东西。</em></li></ul></blockquote><h2 id="ES"><a href="#ES" class="headerlink" title="ES"></a>ES</h2><pre><code class="bash">1.direction</code></pre><h2 id="ST"><a href="#ST" class="headerlink" title="ST"></a>ST</h2><pre><code class="bash"></code></pre><p><strong>AI与ios结合</strong><b><br>Snapchat，Instagram，WhatsApp 纷纷将人工智能技术引入了其滤镜效果。苹果正式推出了 Core ML 框架。它涵盖视觉识别和自然语义处理两大内容，在提供很多训练好的模型基础上还有十分定制化的模型生成工具<br>还有Google推出的TensorFlow，Facebook主导的Caffe，以及Amazon力捧的MXNet，都可以训练出很棒的 Core ML 模型供 iOS 开发使用</b></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;对于diary，我们往往希望它是结构良好，内容清晰的。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="diary" scheme="http://yoursite.com/tags/diary/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>OC项目集</title>
+    <link href="http://yoursite.com/2016/08/14/Project/"/>
+    <id>http://yoursite.com/2016/08/14/Project/</id>
     <published>2016-08-14T02:36:00.000Z</published>
-    <updated>2017-09-12T07:24:49.000Z</updated>
+    <updated>2017-09-12T07:36:31.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="信息整理"><a href="#信息整理" class="headerlink" title="信息整理"></a>信息整理</h1><h2 id="PM"><a href="#PM" class="headerlink" title="PM"></a>PM</h2><pre><code class="bash">1.信息梳理</code></pre><h2 id="AI"><a href="#AI" class="headerlink" title="AI"></a>AI</h2><pre><code class="bash">1.前沿科技</code></pre><h2 id="ES"><a href="#ES" class="headerlink" title="ES"></a>ES</h2><pre><code class="bash">1.direction</code></pre><h2 id="ST"><a href="#ST" class="headerlink" title="ST"></a>ST</h2><pre><code class="bash">1.</code></pre><p>对于一张网页，我们往往希望它是结构良好，内容清晰的，这样搜索引擎才能准确地认知它。<br>而反过来，又有一些情景，我们不希望内容能被轻易获取，比方说电商网站的交易额，教育网站的题目等。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。这就是爬虫与反爬虫这一话题的由来。<br><a id="more"></a><br>对于一张网页，我们往往希望它是结构良好，内容清晰的，这样搜索引擎才能准确地认知它。<br>而反过来，又有一些情景，我们不希望内容能被轻易获取，比方说电商网站的交易额，教育网站的题目等。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。这就是爬虫与反爬虫这一话题的由来。</p><table><thead><tr><th>项目</th><th style="text-align:right">价格</th><th style="text-align:center">数量</th></tr></thead><tbody><tr><td>计算机</td><td style="text-align:right">\$1600</td><td style="text-align:center">5</td></tr><tr><td>手机</td><td style="text-align:right">\$12</td><td style="text-align:center">12</td></tr><tr><td>管线</td><td style="text-align:right">\$1</td><td style="text-align:center">234</td></tr><tr><td>计算机</td><td style="text-align:right">\$1600</td><td style="text-align:center">5</td></tr><tr><td>手机</td><td style="text-align:right">\$12</td><td style="text-align:center">12</td></tr><tr><td>管线</td><td style="text-align:right">\$1</td><td style="text-align:center">234</td></tr><tr><td>计算机</td><td style="text-align:right">\$1600</td><td style="text-align:center">5</td></tr><tr><td>手机</td><td style="text-align:right">\$12</td><td style="text-align:center">12</td></tr><tr><td>管线</td><td style="text-align:right">\$1</td><td style="text-align:center">234</td></tr><tr><td>计算机</td><td style="text-align:right">\$1600</td><td style="text-align:center">5</td></tr><tr><td>手机</td><td style="text-align:right">\$12</td><td style="text-align:center">12</td></tr><tr><td>管线</td><td style="text-align:right">\$1</td><td style="text-align:center">234</td></tr><tr><td>计算机</td><td style="text-align:right">\$1600</td><td style="text-align:center">5</td></tr><tr><td>手机</td><td style="text-align:right">\$12</td><td style="text-align:center">12</td></tr><tr><td>管线</td><td style="text-align:right">\$1</td><td style="text-align:center">234</td></tr><tr><td>计算机</td><td style="text-align:right">\$1600</td><td style="text-align:center">5</td></tr><tr><td>手机</td><td style="text-align:right">\$12</td><td style="text-align:center">12</td></tr><tr><td>管线</td><td style="text-align:right">\$1</td><td style="text-align:center">234</td></tr><tr><td>计算机</td><td style="text-align:right">\$1600</td><td style="text-align:center">5</td></tr><tr><td>手机</td><td style="text-align:right">\$12</td><td style="text-align:center">12</td></tr><tr><td>管线</td><td style="text-align:right">\$1</td><td style="text-align:center">234</td></tr><tr><td>计算机</td><td style="text-align:right">\$1600</td><td style="text-align:center">5</td></tr><tr><td>手机</td><td style="text-align:right">\$12</td><td style="text-align:center">12</td></tr><tr><td>管线</td><td style="text-align:right">\$1</td><td style="text-align:center">234</td></tr></tbody></table>]]></content>
+    <content type="html"><![CDATA[<p>这是一篇关于平时关于项目搜集的项目集</p><a id="more"></a><h2 id="项目"><a href="#项目" class="headerlink" title="项目"></a>项目</h2><p>介绍：其中涵盖了系统架构，应用组件，IM,实施项目</p><h3 id="系统架构"><a href="#系统架构" class="headerlink" title="系统架构"></a>系统架构</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">系统架构</div></pre></td></tr></table></figure><h3 id="系统架构-1"><a href="#系统架构-1" class="headerlink" title="系统架构"></a>系统架构</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">应用组件</div></pre></td></tr></table></figure><h3 id="实施项目"><a href="#实施项目" class="headerlink" title="实施项目"></a>实施项目</h3><pre><code class="bash">实施项目</code></pre>]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;信息整理&quot;&gt;&lt;a href=&quot;#信息整理&quot; class=&quot;headerlink&quot; title=&quot;信息整理&quot;&gt;&lt;/a&gt;信息整理&lt;/h1&gt;&lt;h2 id=&quot;PM&quot;&gt;&lt;a href=&quot;#PM&quot; class=&quot;headerlink&quot; title=&quot;PM&quot;&gt;&lt;/a&gt;PM&lt;/h2&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;1.信息梳理
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&quot;AI&quot;&gt;&lt;a href=&quot;#AI&quot; class=&quot;headerlink&quot; title=&quot;AI&quot;&gt;&lt;/a&gt;AI&lt;/h2&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;1.前沿科技
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&quot;ES&quot;&gt;&lt;a href=&quot;#ES&quot; class=&quot;headerlink&quot; title=&quot;ES&quot;&gt;&lt;/a&gt;ES&lt;/h2&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;1.direction
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&quot;ST&quot;&gt;&lt;a href=&quot;#ST&quot; class=&quot;headerlink&quot; title=&quot;ST&quot;&gt;&lt;/a&gt;ST&lt;/h2&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;1.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;对于一张网页，我们往往希望它是结构良好，内容清晰的，这样搜索引擎才能准确地认知它。&lt;br&gt;而反过来，又有一些情景，我们不希望内容能被轻易获取，比方说电商网站的交易额，教育网站的题目等。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。这就是爬虫与反爬虫这一话题的由来。&lt;br&gt;
+      &lt;p&gt;这是一篇关于平时关于项目搜集的项目集&lt;/p&gt;
     
     </summary>
     
     
-      <category term="旧事" scheme="http://yoursite.com/tags/%E6%97%A7%E4%BA%8B/"/>
+      <category term="OC" scheme="http://yoursite.com/tags/OC/"/>
     
   </entry>
   
