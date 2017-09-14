@@ -5,9 +5,9 @@
   <subtitle>恭自厚而薄责与人</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://AndyYang.com/child/"/>
   <updated>2017-09-13T02:35:56.000Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://AndyYang.com/child/</id>
   
   <author>
     <name>andy</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>模版格式</title>
-    <link href="http://yoursite.com/2018/09/12/9-12/"/>
-    <id>http://yoursite.com/2018/09/12/9-12/</id>
+    <link href="http://AndyYang.com/child/2018/09/12/9-12/"/>
+    <id>http://AndyYang.com/child/2018/09/12/9-12/</id>
     <published>2018-09-11T16:00:00.000Z</published>
     <updated>2017-09-13T02:35:56.000Z</updated>
     
@@ -32,14 +32,14 @@
     </summary>
     
     
-      <category term="diary" scheme="http://yoursite.com/tags/diary/"/>
+      <category term="diary" scheme="http://AndyYang.com/child/tags/diary/"/>
     
   </entry>
   
   <entry>
     <title>09-14</title>
-    <link href="http://yoursite.com/2017/09/14/9-14/"/>
-    <id>http://yoursite.com/2017/09/14/9-14/</id>
+    <link href="http://AndyYang.com/child/2017/09/14/9-14/"/>
+    <id>http://AndyYang.com/child/2017/09/14/9-14/</id>
     <published>2017-09-13T16:00:00.000Z</published>
     <updated>2017-09-14T03:20:56.000Z</updated>
     
@@ -52,14 +52,14 @@
     </summary>
     
     
-      <category term="diary" scheme="http://yoursite.com/tags/diary/"/>
+      <category term="diary" scheme="http://AndyYang.com/child/tags/diary/"/>
     
   </entry>
   
   <entry>
     <title>09-13</title>
-    <link href="http://yoursite.com/2017/09/13/9-13/"/>
-    <id>http://yoursite.com/2017/09/13/9-13/</id>
+    <link href="http://AndyYang.com/child/2017/09/13/9-13/"/>
+    <id>http://AndyYang.com/child/2017/09/13/9-13/</id>
     <published>2017-09-12T16:00:00.000Z</published>
     <updated>2017-09-14T01:35:03.000Z</updated>
     
@@ -72,14 +72,14 @@
     </summary>
     
     
-      <category term="diary" scheme="http://yoursite.com/tags/diary/"/>
+      <category term="diary" scheme="http://AndyYang.com/child/tags/diary/"/>
     
   </entry>
   
   <entry>
     <title>09-12</title>
-    <link href="http://yoursite.com/2017/09/12/9.12/"/>
-    <id>http://yoursite.com/2017/09/12/9.12/</id>
+    <link href="http://AndyYang.com/child/2017/09/12/9.12/"/>
+    <id>http://AndyYang.com/child/2017/09/12/9.12/</id>
     <published>2017-09-11T16:00:00.000Z</published>
     <updated>2017-09-12T10:14:11.000Z</updated>
     
@@ -92,14 +92,14 @@
     </summary>
     
     
-      <category term="diary" scheme="http://yoursite.com/tags/diary/"/>
+      <category term="diary" scheme="http://AndyYang.com/child/tags/diary/"/>
     
   </entry>
   
   <entry>
     <title>OC项目集</title>
-    <link href="http://yoursite.com/2016/08/14/Project/"/>
-    <id>http://yoursite.com/2016/08/14/Project/</id>
+    <link href="http://AndyYang.com/child/2016/08/14/Project/"/>
+    <id>http://AndyYang.com/child/2016/08/14/Project/</id>
     <published>2016-08-14T02:36:00.000Z</published>
     <updated>2017-09-12T07:36:31.000Z</updated>
     
@@ -112,7 +112,7 @@
     </summary>
     
     
-      <category term="OC" scheme="http://yoursite.com/tags/OC/"/>
+      <category term="OC" scheme="http://AndyYang.com/child/tags/OC/"/>
     
   </entry>
   
