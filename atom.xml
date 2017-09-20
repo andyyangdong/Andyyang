@@ -3,7 +3,7 @@
   <title>Hexo</title>
   
   <subtitle>恭自厚而薄责与人</subtitle>
-  <link href="/atom.xml" rel="self"/>
+  <link href="%EF%BC%8F/atom.xml" rel="self"/>
   
   <link href="http://AndyYang.com/child/"/>
   <updated>2017-09-13T02:35:56.000Z</updated>
@@ -37,13 +37,113 @@
   </entry>
   
   <entry>
+    <title>09-20</title>
+    <link href="http://AndyYang.com/child/2017/09/20/9-20/"/>
+    <id>http://AndyYang.com/child/2017/09/20/9-20/</id>
+    <published>2017-09-19T16:00:00.000Z</published>
+    <updated>2017-09-20T03:17:33.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>对于diary，我们往往希望它是结构良好，内容清晰的。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。<br><a id="more"></a></p><h2 id="待办事项"><a href="#待办事项" class="headerlink" title="待办事项"></a>待办事项</h2><ul><li style="list-style: none"><input type="checkbox"> 蓝牙技术匹配</li><li style="list-style: none"><input type="checkbox"> 项目</li><li style="list-style: none"><input type="checkbox"> arkit</li><li style="list-style: none"><input type="checkbox"> ES</li><li style="list-style: none"><input type="checkbox"> MS</li><li style="list-style: none"><input type="checkbox"> other</li></ul><h2 id="PM"><a href="#PM" class="headerlink" title="PM"></a>PM</h2><pre><code class="bash">1.信息梳理</code></pre><h2 id="AI"><a href="#AI" class="headerlink" title="AI"></a>AI</h2><pre><code class="bash">1.前沿科技</code></pre><h2 id="ES"><a href="#ES" class="headerlink" title="ES"></a>ES</h2><pre><code class="bash">1.direction</code></pre><h2 id="ST"><a href="#ST" class="headerlink" title="ST"></a>ST</h2><pre><code class="bash">1.</code></pre><h2 id="MS"><a href="#MS" class="headerlink" title="MS"></a>MS</h2><pre><code class="bash">1.</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;对于diary，我们往往希望它是结构良好，内容清晰的。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="diary" scheme="http://AndyYang.com/child/tags/diary/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>09-19</title>
+    <link href="http://AndyYang.com/child/2017/09/19/9-19/"/>
+    <id>http://AndyYang.com/child/2017/09/19/9-19/</id>
+    <published>2017-09-18T16:00:00.000Z</published>
+    <updated>2017-09-20T03:12:37.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>对于diary，我们往往希望它是结构良好，内容清晰的。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。<br><a id="more"></a></p><h2 id="待办事项"><a href="#待办事项" class="headerlink" title="待办事项"></a>待办事项</h2><ul><li style="list-style: none"><input type="checkbox"> PM</li><li style="list-style: none"><input type="checkbox" checked> 项目练习</li><li style="list-style: none"><input type="checkbox"> 提高自身</li><li style="list-style: none"><input type="checkbox" checked> ES</li><li style="list-style: none"><input type="checkbox"> MS</li><li style="list-style: none"><input type="checkbox"> other</li></ul><h2 id="PM"><a href="#PM" class="headerlink" title="PM"></a>PM</h2><pre><code class="bash">1.信息梳理</code></pre><h2 id="AI"><a href="#AI" class="headerlink" title="AI"></a>AI</h2><pre><code class="bash">1.前沿科技</code></pre><h2 id="ES"><a href="#ES" class="headerlink" title="ES"></a>ES</h2><pre><code class="bash">1.direction</code></pre><h2 id="ST"><a href="#ST" class="headerlink" title="ST"></a>ST</h2><pre><code class="bash">1.</code></pre><h2 id="MS"><a href="#MS" class="headerlink" title="MS"></a>MS</h2><pre><code class="bash">1.</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;对于diary，我们往往希望它是结构良好，内容清晰的。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="diary" scheme="http://AndyYang.com/child/tags/diary/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>09-18 </title>
+    <link href="http://AndyYang.com/child/2017/09/18/9-18/"/>
+    <id>http://AndyYang.com/child/2017/09/18/9-18/</id>
+    <published>2017-09-17T16:00:00.000Z</published>
+    <updated>2017-09-19T01:16:32.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>对于diary，我们往往希望它是结构良好，内容清晰的。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。<br><a id="more"></a></p><h2 id="待办事项"><a href="#待办事项" class="headerlink" title="待办事项"></a>待办事项</h2><ul><li style="list-style: none"><input type="checkbox"> RXswift 项目练习</li><li style="list-style: none"><input type="checkbox" checked> 信息化浏览</li><li style="list-style: none"><input type="checkbox"> AI</li><li style="list-style: none"><input type="checkbox"> ES</li><li style="list-style: none"><input type="checkbox" checked> MS</li><li style="list-style: none"><input type="checkbox"> other</li></ul><h2 id="PM"><a href="#PM" class="headerlink" title="PM"></a>PM</h2><pre><code class="bash">1.信息梳理</code></pre><p>1.苹果取消打赏抽成：为了阻止硬件销量的下滑，并避免第三方应用逃离iOS生态<br>取消打赏分成，已经引发了网络直播和知识付费这两大领域的变革</p><p>2.用户反馈功能：快速迭代，问题定位，标签识别，有效的筛选<br>总结：意见反馈的设计并不能一股脑的从其他优秀产品上照搬，因根据自身产品的调性，用户群的特性，开发资源的可调控性阶段性地去进行设计，参照以上列举的设计结合自身产品一定能合理规划出适合的意见反馈。</p><h2 id="AI"><a href="#AI" class="headerlink" title="AI"></a>AI</h2><pre><code class="bash">1.前沿科技</code></pre><h2 id="ES"><a href="#ES" class="headerlink" title="ES"></a>ES</h2><pre><code class="bash">1.direction</code></pre><p>1.趋势遇见，机遇把控，切勿随波：媒体铺天盖地开始报道时，已经不是机会了，蛋糕已经切好，钱已经装进口袋，所以当事人才公开了，媒体也开始跟进了<br>2.弯道超车，不被变成尸体：年轻人会去做创新，哪怕是稍微有那么一点点差异化，或者人群的定位有一点点不同（创新模式，新的定位人群，预估竞争）<br>3.过去5年成功的主题不是O2O、出海、企业服务，成功率最高的是小米生态链<br>4.公司需要盈利，存活：创业的时候一定想着四年结束战斗，除非特别好的项目会值得All-in，否则世界变得太快<br>5.需要学习，标杆人物，集合力，吸引圈 吸收信息的数量和质量<br>6.产品、技术、市场、运营、战略等各个环节的掌握程度。我碰到的CEO，很少有所有问题都能对答如流的，如果你很快败下阵来，我就知道你下得功夫还不够深</p><h2 id="ST"><a href="#ST" class="headerlink" title="ST"></a>ST</h2><pre><code class="bash">1.techonology</code></pre><h2 id="MS"><a href="#MS" class="headerlink" title="MS"></a>MS</h2><pre><code class="bash">1.mind</code></pre><p>1.寻找牛人， 自己形成凝聚力</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;对于diary，我们往往希望它是结构良好，内容清晰的。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="diary" scheme="http://AndyYang.com/child/tags/diary/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>09-16</title>
+    <link href="http://AndyYang.com/child/2017/09/16/9-16/"/>
+    <id>http://AndyYang.com/child/2017/09/16/9-16/</id>
+    <published>2017-09-15T16:00:00.000Z</published>
+    <updated>2017-09-16T08:46:15.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>对于diary，我们往往希望它是结构良好，内容清晰的。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。<br><a id="more"></a></p><h2 id="待办事项"><a href="#待办事项" class="headerlink" title="待办事项"></a>待办事项</h2><ul><li style="list-style: none"><input type="checkbox" checked> rxSWift+reactor 框架</li><li style="list-style: none"><input type="checkbox"> 国庆活动初步决定</li><li style="list-style: none"><input type="checkbox" checked> PM</li><li style="list-style: none"><input type="checkbox"> 篮球</li><li style="list-style: none"><input type="checkbox"> other</li></ul><h2 id="PM"><a href="#PM" class="headerlink" title="PM"></a>PM</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1.信息梳理</div></pre></td></tr></table></figure><ol><li>产品项目<a href="http://www.woshipm.com/pd/787460.html" target="_blank" rel="external">需求文档模板</a></li></ol><p>比特币：作为世界上第一款虚拟货币，比特币有几大特点：匿名性、去中心化、不可篡改、不可追溯、跨境流动等。此外，开发者声称它总量有限（2100万个）、产出趋缓<br>货币的基本职能是：价值尺度、流通手段、支付手段、价值贮藏、世界货币等。<br>虚拟货币：虚拟货币不具有法偿性、强制性等货币属性。不能作为价值尺度和支付手段<br>首先，暴涨暴跌的虚拟货币，缺乏明确的价值基础，难以发挥价值尺度和流通手段的职能，最终只能沦为投机的工具。<br>再从货币信用上看，像中国、美国这些主权国家发行货币，依赖的是国家信用和黄金储备等标准，而虚拟货币的“信用”基础是数学算法。<br>比特币交易平台：兼具信息中介和交易中介职能，为炒买炒卖活动提供了信息和交易便利，也是造成比特币市场风险的重要原因</p><h2 id="AI"><a href="#AI" class="headerlink" title="AI"></a>AI</h2><pre><code class="bash">1.前沿科技</code></pre><h2 id="ES"><a href="#ES" class="headerlink" title="ES"></a>ES</h2><pre><code class="bash">1.direction</code></pre><h2 id="ST"><a href="#ST" class="headerlink" title="ST"></a>ST</h2><pre><code class="bash">1.</code></pre><h2 id="MS"><a href="#MS" class="headerlink" title="MS"></a>MS</h2><pre><code class="bash">1.</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;对于diary，我们往往希望它是结构良好，内容清晰的。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="diary" scheme="http://AndyYang.com/child/tags/diary/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>09-15</title>
+    <link href="http://AndyYang.com/child/2017/09/15/9-15/"/>
+    <id>http://AndyYang.com/child/2017/09/15/9-15/</id>
+    <published>2017-09-14T16:00:00.000Z</published>
+    <updated>2017-09-16T01:04:05.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>对于diary，我们往往希望它是结构良好，内容清晰的。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。<br><a id="more"></a></p><h2 id="待办事项"><a href="#待办事项" class="headerlink" title="待办事项"></a>待办事项</h2><ul><li style="list-style: none"><input type="checkbox"> PM</li><li style="list-style: none"><input type="checkbox" checked> ST</li><li style="list-style: none"><input type="checkbox"> AI</li><li style="list-style: none"><input type="checkbox" checked> ES</li><li style="list-style: none"><input type="checkbox"> MS</li><li style="list-style: none"><input type="checkbox"> other</li></ul><h2 id="PM"><a href="#PM" class="headerlink" title="PM"></a>PM</h2><pre><code class="bash">1.信息梳理</code></pre><h2 id="AI"><a href="#AI" class="headerlink" title="AI"></a>AI</h2><pre><code class="bash">1.前沿科技</code></pre><h2 id="ES"><a href="#ES" class="headerlink" title="ES"></a>ES</h2><pre><code class="bash">1.direction</code></pre><p>猪死在风口上：<a href="https://baijia.baidu.com/s?id=1578520909524754565&amp;wfr=pc&amp;fr=idx_lst" target="_blank" rel="external">创业罗生门</a><br>1.吃不透市场，摸不清定位，内容成鸡肋：前期缺乏市场调查，抓不住用户定位的他们<br>2.确实职能互补：市场的调研、布局、推广成了他们最头痛的问题<br>3.互联网企业“最值钱”的就是用户数和留存率，也是未来变现的基础<br>4.用户体验的疏忽,色彩：UI的设计也是吸引用户好感度的一个因素。而且不同的客户群体，所倾向的颜色和风格也有所不同<br>5.行业规则：行业内的报价是是安卓7日留存20元一个人头，iOS7日留存7天是35元一个人头；第二条路，去搞定投融机构的项目经理<br>6.没有抓住可持续变现的模式，烧钱容用户<br>7.现实情况：有些公司前期用户注册数比较真实可观的，（烧完融资）为了养活那几十号人，已经沦落到要靠卖注册数据为生，有的则会（作为第三方）为传统企业开发APP、网站或者小程序以求生存</p><h2 id="ST"><a href="#ST" class="headerlink" title="ST"></a>ST</h2><pre><code class="bash">1.</code></pre><p>13.检验协议的一致性</p><p>  使用is检验协议一致性，使用as将协议类型向下转换(downcast)为的其他协议类型</p><p>   is操作符用来检查实例是否遵循了某个协议。</p><p>   as?返回一个可选值，当实例遵循协议时，返回该协议类型；否则返回nil</p><p>   as用以强制向下转换型。<br>2.类型别名 typealias :Swift 使用typealias关键字定义类型别名<br>3.guard :guard也是基于一个表达式的布尔值去判断一段代码是否该被执行</p><ol><li>?? if 判断<h2 id="MS"><a href="#MS" class="headerlink" title="MS"></a>MS</h2><pre><code class="bash">1.</code></pre>1.生存危机 ，主动突破</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;对于diary，我们往往希望它是结构良好，内容清晰的。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="diary" scheme="http://AndyYang.com/child/tags/diary/"/>
+    
+  </entry>
+  
+  <entry>
     <title>09-14</title>
     <link href="http://AndyYang.com/child/2017/09/14/9-14/"/>
     <id>http://AndyYang.com/child/2017/09/14/9-14/</id>
     <published>2017-09-13T16:00:00.000Z</published>
-    <updated>2017-09-14T03:20:56.000Z</updated>
+    <updated>2017-09-15T01:10:47.000Z</updated>
     
-    <content type="html"><![CDATA[<p>对于diary，我们往往希望它是结构良好，内容清晰的。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。<br><a id="more"></a></p><h2 id="待办事项"><a href="#待办事项" class="headerlink" title="待办事项"></a>待办事项</h2><ul><li style="list-style: none"><input type="checkbox"> 博客共享浏览</li><li style="list-style: none"><input type="checkbox"> RXswift框架了解</li><li style="list-style: none"><input type="checkbox"> 周末计划</li><li style="list-style: none"><input type="checkbox"> 信息浏览</li><li style="list-style: none"><input type="checkbox"> MS</li><li style="list-style: none"><input type="checkbox"> other</li></ul><h2 id="PM"><a href="#PM" class="headerlink" title="PM"></a>PM</h2><pre><code class="bash">1.信息梳理</code></pre><p><a href="http://www.woshipm.com/pmd/787542.html" target="_blank" rel="external">产品跟进</a><br>1.项目前评审<br>2.产生PRD需求文档<br>3.原型，需求开发评审<br>4.项目跟进，进度把控</p><blockquote><ul><li>需求说明（场景化）</li><li>砍需求 ：坚持核心功能点，二期优化润色功能，适当砍掉可有可无的功能，放弃意淫功能</li><li>建议需求：与原有思路相同，相互交流 2.新概念点，先了解回去思考给结果（文档形式）</li><li>工作量评估：与项目经理紧密沟通：落实给到确切的时间排期表（让了解需求）</li></ul></blockquote><ol><li>测试跟进</li><li>产品验收</li></ol><h2 id="AI"><a href="#AI" class="headerlink" title="AI"></a>AI</h2><pre><code class="bash">1.前沿科技</code></pre><h2 id="ES"><a href="#ES" class="headerlink" title="ES"></a>ES</h2><pre><code class="bash">1.direction</code></pre><h2 id="ST"><a href="#ST" class="headerlink" title="ST"></a>ST</h2><pre><code class="bash">1.</code></pre><h2 id="MS"><a href="#MS" class="headerlink" title="MS"></a>MS</h2><pre><code class="bash">1.</code></pre>]]></content>
+    <content type="html"><![CDATA[<p>对于diary，我们往往希望它是结构良好，内容清晰的。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。<br><a id="more"></a></p><h2 id="待办事项"><a href="#待办事项" class="headerlink" title="待办事项"></a>待办事项</h2><ul><li style="list-style: none"><input type="checkbox"> 博客共享浏览</li><li style="list-style: none"><input type="checkbox"> RXswift框架了解</li><li style="list-style: none"><input type="checkbox"> 周末计划</li><li style="list-style: none"><input type="checkbox" checked> 信息浏览</li><li style="list-style: none"><input type="checkbox" checked> MS</li><li style="list-style: none"><input type="checkbox"> other</li></ul><h2 id="PM"><a href="#PM" class="headerlink" title="PM"></a>PM</h2><pre><code class="bash">1.信息梳理</code></pre><p><a href="http://www.woshipm.com/pmd/787542.html" target="_blank" rel="external">产品跟进</a><br>1.项目前评审<br>2.产生PRD需求文档<br>3.原型，需求开发评审<br>4.项目跟进，进度把控</p><blockquote><ul><li>需求说明（场景化）</li><li>砍需求 ：坚持核心功能点，二期优化润色功能，适当砍掉可有可无的功能，放弃意淫功能</li><li>建议需求：与原有思路相同，相互交流 2.新概念点，先了解回去思考给结果（文档形式）</li><li>工作量评估：与项目经理紧密沟通：落实给到确切的时间排期表（让了解需求）</li></ul></blockquote><ol><li>测试跟进</li><li>产品验收</li></ol><h2 id="AI"><a href="#AI" class="headerlink" title="AI"></a>AI</h2><pre><code class="bash">1.前沿科技</code></pre><h2 id="ES"><a href="#ES" class="headerlink" title="ES"></a>ES</h2><pre><code class="bash">1.direction</code></pre><p>未来之<a href="http://www.cyzone.cn/a/20170910/315141.html" target="_blank" rel="external">战略</a><br>1.创业到底为了什么？提供了什么价值？解决了什么痛点？哪怕只有一个点，你感觉到用户很痛的地方<br>2.创始团队知根知底非常重要,最关键的就是信任和互补<br>未来的技术改革，一定会迎来新的洗牌的机会</p><h2 id="ST"><a href="#ST" class="headerlink" title="ST"></a>ST</h2><pre><code class="bash">1.</code></pre><h2 id="MS"><a href="#MS" class="headerlink" title="MS"></a>MS</h2><pre><code class="bash">1.</code></pre><ol><li>专注与本心，对于人的自我认知，自我发展，也不能以社会价值普遍功利价值<br>去审视一个人，去评定一下人，避免自己陷入执拗，教育本身并没有错，只是方式上有偏差<br>对于社会，和教育也应该抱有乐观主义，教育是人之根本，发现自我。</li></ol>]]></content>
     
     <summary type="html">
     
