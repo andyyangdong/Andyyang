@@ -452,6 +452,9 @@ body {
     width: 900px;
   }
 }
+.main {
+  padding-bottom: 150px;
+}
 .main-inner {
   margin: 0 auto;
   width: 700px;
@@ -462,6 +465,9 @@ body {
   }
 }
 .footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
   width: 100%;
   min-height: 50px;
 }
@@ -971,8 +977,7 @@ pre .javascript .function {
   position: relative;
   top: -1px;
   margin: 0 10px;
-  padding: 0 10px;
-  line-height: 30px;
+  padding: 0 11px;
 }
 @media (max-width: 767px) {
   .page-number-basic,
@@ -1023,6 +1028,7 @@ pre .javascript .function {
     margin-bottom: 10px;
     border-top: 0;
     border-bottom: 1px solid #eee;
+    padding: 0 10px;
   }
   .pagination .prev:hover,
   .pagination .next:hover,
@@ -1219,7 +1225,7 @@ pre .javascript .function {
 }
 .post-body .image-caption,
 .post-body .figure .caption {
-  margin: 10px auto 15px;
+  margin: -20px auto 15px;
   text-align: center;
   font-size: 14px;
   color: #999;
@@ -1316,8 +1322,8 @@ pre .javascript .function {
   padding: 3px;
   border: 1px solid #ddd;
 }
-.posts-expand .fancybox img {
-  margin: 0 auto;
+.posts-expand .post-body .fancybox img {
+  margin: 0 auto 25px;
 }
 @media (max-width: 767px) {
   .posts-collapse {
@@ -1438,15 +1444,9 @@ pre .javascript .function {
   display: none;
 }
 .posts-expand .post-title {
-  font-size: 26px;
   text-align: center;
   word-break: break-word;
   font-weight: 400;
-}
-@media (max-width: 767px) {
-  .posts-expand .post-title {
-    font-size: 22px;
-  }
 }
 .posts-expand .post-title-link {
   display: inline-block;
@@ -1818,7 +1818,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #b1002f;
+  background: #9eff29;
 }
 .links-of-blogroll {
   font-size: 13px;
