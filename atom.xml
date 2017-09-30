@@ -3,7 +3,7 @@
   <title>Hexo</title>
   
   <subtitle>恭自厚而薄责与人</subtitle>
-  <link href="%EF%BC%8F/atom.xml" rel="self"/>
+  <link href="/atom.xml" rel="self"/>
   
   <link href="http://AndyYang.com/child/"/>
   <updated>2017-09-13T02:35:56.000Z</updated>
