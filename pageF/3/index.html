@@ -156,30 +156,116 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-10-16" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-JAVA/JAVA 并发实践" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/16/10-16/">10-16</a>
+      <a class="article-title" href="/2018/02/27/JAVA/JAVA 并发实践/">线上定位问题解决</a>
     </h1>
   
 
         
-        <a href="/2017/10/16/10-16/" class="archive-article-date">
-  	<time datetime="2017-10-15T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-16</time>
+        <a href="/2018/02/27/JAVA/JAVA 并发实践/" class="archive-article-date">
+  	<time datetime="2018-02-26T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>对于diary，我们往往希望它是结构良好，内容清晰的。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。<br>
-        
-          <a class="article-more-a" href="/2017/10/16/10-16/#more">more >></a>
-        
+        <h1 id="线上定位问题解决-参照方案"><a href="#线上定位问题解决-参照方案" class="headerlink" title="线上定位问题解决 参照方案"></a>线上定位问题解决 <a href="http://techblog.youdao.com/?p=961" target="_blank" rel="external">参照方案</a></h1><h2 id="简单步骤"><a href="#简单步骤" class="headerlink" title="简单步骤"></a>简单步骤</h2><p>1. top: 记录cpu idle%。如果发现cpu占用过高，则c, shift+h, shift + p查看线程占用CPU情况，并记录</p>
+<p>2. free: 查看内存情况，如果剩余量较小，则top中shift+m查看内存占用情况，并记录</p>
+<p>3. 如果top中发现占用资源较多的进程名称（例如java这样的通用名称）不太能说明进程身份，则要用ps xuf | grep java等方式记录下具体进程的身份 </p>
+<p>4. 取jstack结果。假如取不到，尝试加/F</p>
+<p>  jstack命令：<strong>jstack PID &gt; jstack.log</strong></p>
+<p>5. jstat查看OLD区占用率。如果占用率到达或接近100%，则jmap取结果。假如取不到，尝试加/F </p>
+<p>  jstat命令： <strong>jstat -gcutil PID</strong></p>
+<pre><code>S0  S1    E      O     P     YGC    YGCT    FGC  FGCT   GCT
+</code></pre><p>   0.00 21.35 88.01 97.35 59.89 111461 1904.894 1458 291.369 2196.263</p>
+<p>  jmap命令： <strong> jmap -dump:file=dump.map PID</strong></p>
+<p>6. 重启服务</p>
+<h1 id="性能测试"><a href="#性能测试" class="headerlink" title="性能测试"></a>性能测试</h1><p>netstat 查看数据库连接数</p>
+<p>ps 查看线程池线程数</p>
+<p>查看mysql慢查询日志</p>
+<p>查看网络流量 cat /proc/net/dev</p>
+<p>查看系统平均负载 cat /proc/loadavg</p>
+<p>查看系统内存使用情况 cat /proc/meminfo</p>
+<p>查看cpu使用率 cat /proc/sta</p>
+<h1 id="异部任务池"><a href="#异部任务池" class="headerlink" title="异部任务池"></a>异部任务池</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyFutureTask</span> </span>&#123;</div><div class="line">	</div><div class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> ExecutorService EXECUTOR_SERVICE = Executors.newFixedThreadPool(<span class="number">4</span>);</div><div class="line">	</div><div class="line">    <span class="keyword">private</span> Future&lt;List&lt;Word&gt;&gt; submit(<span class="keyword">final</span> String sentence)&#123;</div><div class="line">        <span class="keyword">return</span> EXECUTOR_SERVICE.submit(<span class="keyword">new</span> Callable&lt;List&lt;Word&gt;&gt;()&#123;</div><div class="line">        	</div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> List&lt;Word&gt; <span class="title">call</span><span class="params">()</span> </span>&#123;</div><div class="line">            	</div><div class="line">                <span class="keyword">return</span> segSentence(sentence);</div><div class="line">            &#125;</div><div class="line"></div><div class="line">			</div><div class="line">        &#125;);</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">private</span> List&lt;Word&gt; <span class="title">segSentence</span><span class="params">(String sentence)</span> </span>&#123;</div><div class="line">		</div><div class="line">    	<span class="comment">//http请求或者链接数据库</span></div><div class="line">    	List&lt;Word&gt; sentences=<span class="keyword">new</span> ArrayList&lt;Word&gt;();</div><div class="line">    	sentences.add(<span class="keyword">new</span> Word(<span class="string">"ok"</span>)); </div><div class="line">    	sentences.add(<span class="keyword">new</span> Word(<span class="string">"异步线程池的使用"</span>));</div><div class="line">    	sentences.add(<span class="keyword">new</span> Word(<span class="string">"ok异步线程池的使用"</span>));</div><div class="line">    	sentences.add(<span class="keyword">new</span> Word(<span class="string">"test"</span>));</div><div class="line">    	</div><div class="line">		<span class="keyword">return</span> sentences;</div><div class="line">	&#125;</div><div class="line">    </div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception, ExecutionException </span>&#123;</div><div class="line">		</div><div class="line">		Future&lt;List&lt;Word&gt;&gt;  futures =<span class="keyword">new</span> MyFutureTask().submit(<span class="string">""</span>);</div><div class="line">		<span class="keyword">for</span>(Word word:futures.get())</div><div class="line">		&#123;</div><div class="line">			System.out.println(word);</div><div class="line">			</div><div class="line">		&#125;</div><div class="line">		MyFutureTask.EXECUTOR_SERVICE.shutdown();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * Java 异步线程池的使用</span></div><div class="line"><span class="comment"> * <span class="doctag">@author</span> Administrator</span></div><div class="line"><span class="comment"> *</span></div><div class="line"><span class="comment"> */</span></div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyFutureTask</span> </span>&#123;</div><div class="line">	</div><div class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> ExecutorService EXECUTOR_SERVICE = Executors.newFixedThreadPool(<span class="number">4</span>);</div><div class="line">	</div><div class="line">	<span class="comment">//异步任务的关键在Future类</span></div><div class="line">    <span class="keyword">private</span> Future&lt;List&lt;Result&gt;&gt; submit(<span class="keyword">final</span> String sentence)&#123;</div><div class="line">    	</div><div class="line">    	<span class="comment">//EXECUTOR_SERVICE.execute(command);</span></div><div class="line">        <span class="keyword">return</span> EXECUTOR_SERVICE.submit(<span class="keyword">new</span> Callable&lt;List&lt;Result&gt;&gt;()&#123;</div><div class="line">        	</div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> List&lt;Result&gt; <span class="title">call</span><span class="params">()</span> </span>&#123;</div><div class="line">            	</div><div class="line">                <span class="keyword">return</span> segSentence(sentence);</div><div class="line">            &#125;</div><div class="line"></div><div class="line">			</div><div class="line">        &#125;);</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">private</span> List&lt;Result&gt; <span class="title">segSentence</span><span class="params">(String sentence)</span> </span>&#123;</div><div class="line">		</div><div class="line">    	System.out.println(<span class="string">"异步线程开始执行"</span>);</div><div class="line">    	<span class="comment">//http请求或者链接数据库</span></div><div class="line">    	List&lt;Result&gt; sentences=<span class="keyword">new</span> ArrayList&lt;Result&gt;();</div><div class="line">    	sentences.add(<span class="keyword">new</span> Result(<span class="string">"ok"</span>)); </div><div class="line">    	sentences.add(<span class="keyword">new</span> Result(<span class="string">"异步线程池的使用"</span>));</div><div class="line">    	sentences.add(<span class="keyword">new</span> Result(<span class="string">"ok异步线程池的使用"</span>));</div><div class="line">    	sentences.add(<span class="keyword">new</span> Result(<span class="string">"test"</span>));</div><div class="line">    	</div><div class="line">    	System.out.println(<span class="string">"异步线程执行完成"</span>);</div><div class="line">    	<span class="keyword">try</span> &#123;</div><div class="line">			Thread.sleep(<span class="number">1000</span>);</div><div class="line">			System.out.println(<span class="string">"异步线程休息完成"</span>);</div><div class="line">		&#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</div><div class="line">			e.printStackTrace();</div><div class="line">		&#125;</div><div class="line">    	</div><div class="line">    	</div><div class="line">    	</div><div class="line">		<span class="keyword">return</span> sentences;</div><div class="line">	&#125;</div><div class="line">    </div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception, ExecutionException </span>&#123;</div><div class="line">		</div><div class="line">		Future&lt;List&lt;Result&gt;&gt;  futures =<span class="keyword">new</span> MyFutureTask().submit(<span class="string">""</span>);<span class="comment">//提交异步任务，任务会在异步线程执行。</span></div><div class="line">		<span class="comment">//主线程继续执行其他。http://blog.csdn.net/yangyan19870319/article/details/6093481</span></div><div class="line">		<span class="keyword">int</span> i=<span class="number">0</span>;</div><div class="line">		<span class="keyword">while</span> (i&lt;<span class="number">10</span>) &#123;</div><div class="line">			</div><div class="line">			System.out.println(<span class="string">"主线程做其他事情去了"</span>);</div><div class="line">			i++;</div><div class="line">			Thread.sleep(<span class="number">500</span>);</div><div class="line">		&#125;	</div><div class="line">		<span class="comment">//在调用futures.get()方法获取异步任务数据之前，我们可以做其他事情。</span></div><div class="line">		<span class="keyword">for</span>(Result word:futures.get(<span class="number">5000</span>, TimeUnit.MILLISECONDS))<span class="comment">//取得结果，同时设置超时执行时间为5秒。同样可以用future.get()，不设置执行超时时间取得结果 </span></div><div class="line">		&#123;</div><div class="line">			System.out.println(word);</div><div class="line">			</div><div class="line">		&#125;</div><div class="line">		MyFutureTask.EXECUTOR_SERVICE.shutdown();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line">``` </div><div class="line"></div><div class="line"></div><div class="line">```java </div><div class="line">结果：</div><div class="line">主线程做其他事情去了</div><div class="line">异步线程开始执行</div><div class="line">异步线程执行完成</div><div class="line">主线程做其他事情去了</div><div class="line">异步线程休息完成</div><div class="line">主线程做其他事情去了</div><div class="line">主线程做其他事情去了</div><div class="line">主线程做其他事情去了</div><div class="line">主线程做其他事情去了</div><div class="line">主线程做其他事情去了</div><div class="line">主线程做其他事情去了</div><div class="line">主线程做其他事情去了</div><div class="line">主线程做其他事情去了</div></pre></td></tr></table></figure>
+<h1 id="生产者-消费者模式的三种实现方式"><a href="#生产者-消费者模式的三种实现方式" class="headerlink" title="生产者-消费者模式的三种实现方式"></a><a href="http://www.cnblogs.com/fankongkong/p/7339848.html" target="_blank" rel="external">生产者-消费者模式的三种实现方式</a></h1><p>并发编程中使用消费者和生产者能够解决绝大多数并发问题。</p>
+<h2 id="1-背景"><a href="#1-背景" class="headerlink" title="1.背景"></a>1.背景</h2><p>生产者生产数据到<strong>缓冲区</strong>中，消费者从<strong>缓冲区</strong>中取数据。</p>
+<p>如果<strong>缓冲区</strong>已经满了，则生产者线程阻塞；</p>
+<p>如果<strong>缓冲区</strong>为空，那么消费者线程阻塞。</p>
+<h2 id="2、方式一：synchronized、wait和notify"><a href="#2、方式一：synchronized、wait和notify" class="headerlink" title="2、方式一：synchronized、wait和notify **"></a>2、方式一：synchronized、wait和notify **</h2><p>``` java<br>//wait 和 notify<br>public class ProducerConsumerWithWaitNofity {<br>    public static void main(String[] args) {<br>        Resource resource = new Resource();<br>        //生产者线程<br>        ProducerThread p1 = new ProducerThread(resource);<br>        ProducerThread p2 = new ProducerThread(resource);<br>        ProducerThread p3 = new ProducerThread(resource);<br>        //消费者线程<br>        ConsumerThread c1 = new ConsumerThread(resource);<br>        //ConsumerThread c2 = new ConsumerThread(resource);<br>        //ConsumerThread c3 = new ConsumerThread(resource);</p>
+<pre><code>    p1.start();
+    p2.start();
+    p3.start();
+    c1.start();
+    //c2.start();
+    //c3.start();
+}
+</code></pre><p>}<br>/**</p>
+<ul>
+<li>公共资源类</li>
+<li><p>@author<br><em>
+</em>/<br>class Resource{//重要<br> //当前资源数量<br> private int num = 0;<br> //资源池中允许存放的资源数目<br> private int size = 10;</p>
+<p> /**</p>
+<ul>
+<li>从资源池中取走资源<br>*/<br>public synchronized void remove(){<br> if(num &gt; 0){<pre><code>num--;
+System.out.println(&quot;消费者&quot; + Thread.currentThread().getName() +
+        &quot;消耗一件资源，&quot; + &quot;当前线程池有&quot; + num + &quot;个&quot;);
+notifyAll();//通知生产者生产资源
+</code></pre> }else{<pre><code>try {
+    //如果没有资源，则消费者进入等待状态
+    wait();
+    System.out.println(&quot;消费者&quot; + Thread.currentThread().getName() + &quot;线程进入等待状态&quot;);
+} catch (InterruptedException e) {
+    e.printStackTrace();
+}
+</code></pre> }<br>}<br>/**</li>
+<li>向资源池中添加资源<br>*/<br>public synchronized void add(){<br> if(num &lt; size){<pre><code>num++;
+System.out.println(Thread.currentThread().getName() + &quot;生产一件资源，当前资源池有&quot; 
++ num + &quot;个&quot;);
+//通知等待的消费者
+notifyAll();
+</code></pre> }else{<pre><code>//如果当前资源池中有10件资源
+try{
+    wait();//生产者进入等待状态，并释放锁
+    System.out.println(Thread.currentThread().getName()+&quot;线程进入等待&quot;);
+}catch(InterruptedException e){
+    e.printStackTrace();
+}
+</code></pre> }<br>}<br>}<br>/**</li>
+</ul>
+</li>
+<li>消费者线程<br>*/<br>class ConsumerThread extends Thread{<br> private Resource resource;<br> public ConsumerThread(Resource resource){<pre><code>this.resource = resource;
+</code></pre> }<br> @Override<br> public void run() {<pre><code>while(true){
+    try {
+        Thread.sleep(1000);
+    } catch (InterruptedException e) {
+        e.printStackTrace();
+    }
+    resource.remove();
+}
+</code></pre> }<br>}<br>/**</li>
+<li>生产者线程<br>*/<br>class ProducerThread extends Thread{<br> private Resource resource;<br> public ProducerThread(Resource resource){<pre><code>this.resource = resource;
+</code></pre> }<br> @Override<br> public void run() {<pre><code>//不断地生产资源
+while(true){
+    try {
+        Thread.sleep(1000);
+    } catch (InterruptedException e) {
+        e.printStackTrace();
+    }
+    resource.add();
+}
+</code></pre> }</li>
+</ul>
+<p>}</p>
+
       
 
       
@@ -192,7 +278,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">diary</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">JAVA</a>
         		</li>
       		
 		</ul>
@@ -202,7 +288,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/16/10-16/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/02/27/JAVA/JAVA 并发实践/">展开全文 >></a>
         </p>
       
 
@@ -232,30 +318,54 @@
 
 
   
-    <article id="post-10-12" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-JAVA/知识要点" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/12/10-12/">10-12</a>
+      <a class="article-title" href="/2018/02/27/JAVA/知识要点/">知识要点</a>
     </h1>
   
 
         
-        <a href="/2017/10/12/10-12/" class="archive-article-date">
-  	<time datetime="2017-10-11T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-12</time>
+        <a href="/2018/02/27/JAVA/知识要点/" class="archive-article-date">
+  	<time datetime="2018-02-26T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>对于diary，我们往往希望它是结构良好，内容清晰的。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。<br>
-        
-          <a class="article-more-a" href="/2017/10/12/10-12/#more">more >></a>
-        
+        <h1 id="知识要点"><a href="#知识要点" class="headerlink" title="知识要点"></a>知识要点</h1><p>ioc:</p>
+<p> · 构建 BeanFactory，以便于产生所需的“演员”</p>
+<p> · 注册可能感兴趣的事件</p>
+<p> · 创建 Bean 实例对象</p>
+<p> · 触发被监听的事件</p>
+<p> · </p>
+<p>我们把 Ioc 容器比作一个箱子，这个箱子里有若干个球的模子，可以用这些模子来造很多种不同的球，还有一个造这些球模的机器，这个机器可以产生球模。那么他们的对应关系就是 BeanFactory 就是那个造球模的机器，球模就是 Bean，而球模造出来的球就是 Bean 的实例。那前面所说的几个扩展点又在什么地方呢？ BeanFactoryPostProcessor 对应到当造球模被造出来时，你将有机会可以对其做出设当的修正，也就是他可以帮你修改球模。而 InitializingBean 和 DisposableBean 是在球模造球的开始和结束阶段，你可以完成一些预备和扫尾工作。BeanPostProcessor 就可以让你对球模造出来的球做出适当的修正。最后还有一个 FactoryBean，它可是一个神奇的球模。这个球模不是预先就定型了，而是由你来给他确定它的形状，既然你可以确定这个球模型的形状，当然他造出来的球肯定就是你想要的球了，这样在这个箱子里尼可以发现所有你想要的球</p>
+<p>IoC(Inverse of Controller,控制反转)？</p>
+<p>控制权：A调用B组件，可以说成A组件拥有控制权。控制权可以代指对象的创建、初始化、销毁等操作。</p>
+<p>控制反转：是将控制权转移，转移给第三方（Spring容器），当需要改变对象关系时，只需要修改Spring容器注入配置即可。</p>
+<p>IoC是一种思想，Spring框架通过DI（依赖注入:setter注入和构造方法注入）技术实现了控制反转。</p>
+<p>什么是AOP?</p>
+<p>Aspect Oriented Programming 面向方面编程。</p>
+<p>面向方面编程侧重点是关注方面组件（共通处理部分），可以将方面组件作用到某一批目标对象的方法上。</p>
+<p>FactoryBean和BeanFactor</p>
+<p> 1 BeanFactory是个Factory，也就是 IOC 容器或对象工厂，所有的 Bean 都是由 BeanFactory( 也就是 IOC 容器 ) 来进行管理。</p>
+<p> 2 FactoryBean是一个能生产或者修饰生成对象的工厂Bean，可以在IOC容器中被管理，所以它并不是一个简单的Bean。当使用容器中factory bean的时候，该容器不会返回factory bean本身，而是返回其生成的对象。</p>
+<h2 id="Spring-MVC-本质是一个Servlet"><a href="#Spring-MVC-本质是一个Servlet" class="headerlink" title="Spring MVC 本质是一个Servlet"></a>Spring MVC 本质是一个Servlet</h2><p> ▪ 加载配置文件</p>
+<p> ▪ 扫描配置包</p>
+<p> ▪ 利用反射机制，实例化存放IOC容器</p>
+<p> ▪ 初始化 HandlerMapping</p>
+<p> ▪ 异常拦截</p>
+<p> ▪ 处理参数</p>
+<p> ▪ HandlerMapping 通过url反射调用方</p>
+<p>Spring MVC 和 struts2 对比</p>
+<h3 id="servlet-是如何运行的？"><a href="#servlet-是如何运行的？" class="headerlink" title="servlet 是如何运行的？"></a>servlet 是如何运行的？</h3><p> 当用户向浏览器地址栏输入<a href="http://ip:port/helloweb/sayHello?name=zs" target="_blank" rel="external">http://ip:port/helloweb/sayHello?name=zs</a><br>1) 浏览器使用ip：port（端口号）连接服务器<br>2) 浏览器将请求数据按照http 协议打成一个数据包（请求数据包）发送给服务器<br>请求数据包的内容包含了请求资源路径(/helloweb/sayHello?name=zs)，<br>另外，在请求数据包当中，还会包含浏览器自动生成的一些信息。<br>3) 服务器创建两个对象：请求对象（Request）和响应对象（Response）<br>服务器解析请求数据包，将解析之后的数据存放到请求对象里面，方便servlet读取请求数据(因为servlet不用解析请求数据包，如果要解析，需要理解http 协议)。<br>请求对象是HttpServletRequest接口的一个实现。<br>响应对象是HttpServletResponse 接口的一个实现，响应对象由于存放servlet处理的结果。<br>4) 依据请求资源路径找到相应的servlet配置，通过反射创建servlet实例。然后调用其service()<br>方法。<br>在调用service()方法时，会将事先创建好的请求对象(request)和响应对象(response)作为参数进行传递。在servlet内部，可以通过request获得请求数据，戒者通过response 设置响应数据。<br>5) 服务器从response 中获取数据，按照 http 协议打成一个数据包(响应数据包),发送给浏览器。<br>6) 浏览器会解析响应数据包，取出相应的数据，生成相应的界面。</p>
+<p>SpringMVC集成了Ajax，使用非常方便，只需一个注解@ResponseBody就可以实现，然后直接返回响应文本即可，而Struts2拦截器集成了Ajax，在Action中处理时一般必须安装插件或者自己写代码集成进去，使用起来也相对不方便</p>
+
       
 
       
@@ -268,7 +378,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">diary</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">JAVA</a>
         		</li>
       		
 		</ul>
@@ -278,7 +388,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/12/10-12/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/02/27/JAVA/知识要点/">展开全文 >></a>
         </p>
       
 
@@ -308,29 +418,29 @@
 
 
   
-    <article id="post-10-11" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-2-27" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/11/10-11/">10-11</a>
+      <a class="article-title" href="/2018/02/27/2-27/">2-27</a>
     </h1>
   
 
         
-        <a href="/2017/10/11/10-11/" class="archive-article-date">
-  	<time datetime="2017-10-10T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-11</time>
+        <a href="/2018/02/27/2-27/" class="archive-article-date">
+  	<time datetime="2018-02-26T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>对于diary，我们往往希望它是结构良好，内容清晰的。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。<br>
+        <p>plannin,有节奏，有思想，有热度的去过生活。懂得去争取，追求，相信会越来越好 — 致来年的自己<br>
         
-          <a class="article-more-a" href="/2017/10/11/10-11/#more">more >></a>
+          <a class="article-more-a" href="/2018/02/27/2-27/#more">more >></a>
         
       
 
@@ -344,7 +454,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">diary</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">planning</a>
         		</li>
       		
 		</ul>
@@ -354,7 +464,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/11/10-11/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/02/27/2-27/">展开全文 >></a>
         </p>
       
 
@@ -384,30 +494,47 @@
 
 
   
-    <article id="post-10-10" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-JAVA/JAVA 对象及变量的并发访问" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/10/10-10/">10-10</a>
+      <a class="article-title" href="/2018/02/27/JAVA/JAVA 对象及变量的并发访问/">Java多线程编程核心</a>
     </h1>
   
 
         
-        <a href="/2017/10/10/10-10/" class="archive-article-date">
-  	<time datetime="2017-10-09T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-10</time>
+        <a href="/2018/02/27/JAVA/JAVA 对象及变量的并发访问/" class="archive-article-date">
+  	<time datetime="2018-02-26T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>对于diary，我们往往希望它是结构良好，内容清晰的。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。<br>
-        
-          <a class="article-more-a" href="/2017/10/10/10-10/#more">more >></a>
-        
+        <h1 id="Java多线程编程核心-对象及变量的并发访问"><a href="#Java多线程编程核心-对象及变量的并发访问" class="headerlink" title="Java多线程编程核心 - 对象及变量的并发访问"></a>Java多线程编程核心 - 对象及变量的并发访问</h1><h2 id="synchronized同步方法"><a href="#synchronized同步方法" class="headerlink" title="synchronized同步方法"></a>synchronized同步方法</h2><p>1、什么是“线程安全”与“非线程安全”？</p>
+<ul>
+<li>线程安全就是多线程访问时，采用了加锁机制，当一个线程访问该类的某个数据时，进行保护，其他线程不能进行访问直到该线程读取完，其他线程才可使用。不会出现数据不一致或者数据污染。 线程不安全就是不提供数据访问保护，有可能出现多个线程先后更改数据造成所得到的数据是脏数据</li>
+</ul>
+<h3 id="1-1-方法内的变量是线程安全的"><a href="#1-1-方法内的变量是线程安全的" class="headerlink" title="1.1  方法内的变量是线程安全的"></a>1.1  方法内的变量是线程安全的</h3><p>解释：由于方法内的变量是私有的，本体访问的同时别人访问不了，所以是线程安全的。</p>
+<h3 id="1-2-实例变量是非线程安全的"><a href="#1-2-实例变量是非线程安全的" class="headerlink" title="1.2  实例变量是非线程安全的"></a>1.2  实例变量是非线程安全的</h3><p>解释：由于实例变量可以由多个线程访问，当本体操作变量过程中，别人也可以抢占资源操作变量，使数据不同步了，所以是非线程安全的。（之前博文已经实现过这种情况）</p>
+<h3 id="1-3线程与锁"><a href="#1-3线程与锁" class="headerlink" title="1.3线程与锁"></a>1.3线程与锁</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Service</span> </span>&#123;<span class="comment">//服务类</span></div><div class="line"></div><div class="line">	<span class="keyword">private</span> <span class="keyword">int</span> age=<span class="number">0</span>;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title">get</span><span class="params">(String username)</span></span>&#123;<span class="comment">//同步方法</span></div><div class="line">		<span class="keyword">try</span>&#123;</div><div class="line">			<span class="keyword">if</span>(username.equals(<span class="string">"张三"</span>))&#123;</div><div class="line">				age=<span class="number">20</span>;</div><div class="line">				System.out.println(<span class="string">"张三获取年龄"</span>);</div><div class="line">				Thread.sleep(<span class="number">2000</span>);</div><div class="line">			&#125;<span class="keyword">else</span>&#123;</div><div class="line">				age=<span class="number">30</span>;</div><div class="line">				System.out.println(<span class="string">"李四获年龄"</span>);</div><div class="line">			&#125;</div><div class="line">			System.out.println(username+<span class="string">",age="</span>+age);</div><div class="line">		&#125;<span class="keyword">catch</span>(Exception e)&#123;</div><div class="line">			e.printStackTrace();</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyThread1</span> <span class="keyword">extends</span> <span class="title">Thread</span></span>&#123;<span class="comment">//线程1</span></div><div class="line"></div><div class="line">    <span class="keyword">private</span> Service service;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyThread1</span><span class="params">(Service service)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>();</div><div class="line">        <span class="keyword">this</span>.service = service;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</div><div class="line">        service.get(<span class="string">"张三"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyThread2</span> <span class="keyword">extends</span> <span class="title">Thread</span></span>&#123;<span class="comment">//线程2</span></div><div class="line"></div><div class="line">    <span class="keyword">private</span> Service service;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyThread2</span><span class="params">(Service service)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>();</div><div class="line">        <span class="keyword">this</span>.service = service;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</div><div class="line">        service.get(<span class="string">"李四"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">测试类<span class="number">1</span>：</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line"></div><div class="line">		Service service=<span class="keyword">new</span> Service();</div><div class="line">		MyThread1 myThread1=<span class="keyword">new</span> MyThread1(service);</div><div class="line">		myThread1.start();</div><div class="line">		MyThread2 myThread2=<span class="keyword">new</span> MyThread2(service);</div><div class="line">		myThread2.start();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">`</div></pre></td></tr></table></figure>
+<p>解释：我们的前提是多个线程访问同一个锁，如果当前进来一个线程获得同步方法，那么当前这个线程就持有了该方法所属对象的锁，其他线程就只能处于等待态。</p>
+<p>结果：<br>张三获取年龄<br>张三,age=20<br>李四获年龄<br>李四,age=30</p>
+<h2 id="1-3-2多个线程访问多个锁"><a href="#1-3-2多个线程访问多个锁" class="headerlink" title="1.3.2多个线程访问多个锁"></a>1.3.2多个线程访问多个锁</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line"></div><div class="line">	Service service1=<span class="keyword">new</span> Service();</div><div class="line">	Service service2=<span class="keyword">new</span> Service();</div><div class="line">	MyThread1 myThread1=<span class="keyword">new</span> MyThread1(service1);</div><div class="line">	myThread1.start();</div><div class="line">	MyThread2 myThread2=<span class="keyword">new</span> MyThread2(service2);</div><div class="line">	myThread2.start();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>解释：我们的前提是多个线程访问多个锁，在当前线程获取其中一个锁时，对于同步方法内的代码是线程安全的。结果的顺序看出是异步的，在于不同锁之间的线程是不同步的。</p>
+<p>结果：<br>张三获取年龄<br>李四获年龄<br>李四,age=30<br>张三,age=20</p>
+<h3 id="1-3-3总结"><a href="#1-3-3总结" class="headerlink" title="1.3.3总结"></a>1.3.3总结</h3><p>(1).对于多个线程访问共享资源，才需要使用锁来进行同步化访问读写。并且对于synchronized修饰的方法为同步方法，是对象级别上的锁，多个线程访问时，必须<strong>“排队运行”</strong> 。</p>
+<p>(2).对于多个线程访问对象，如果线程1获取了该对象的同步方法的锁，那么其他对象只能排队等到线程1执行完释放锁，才可以再获取锁去执行同步方法。如果该对象中有多个同步方法，那么其他线程只能排队等线程1执行完所有的同步方法释放锁，其他线程才可获取锁再执行同步方法。如果该对象中既有同步方法又有非同步的方法，那么线程1执行同步方法的同时，其他线程是可以以异步的方式执行非同步的方法</p>
+<h3 id="1-4synchronized锁的重入"><a href="#1-4synchronized锁的重入" class="headerlink" title="1.4synchronized锁的重入"></a>1.4synchronized锁的重入</h3><p>解释：就是当前线程已经得到了一个对象锁之后，再次请求此对象的锁可以再次得到该对象的锁。也就是说，<strong>synchronized方法体或代码块中再次调用类中其他synchronized方法和块时，同样也可获取锁。</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Service</span> </span>&#123;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title">getAge</span><span class="params">(String username)</span></span>&#123;</div><div class="line">		</div><div class="line">			<span class="keyword">if</span>(username.equals(<span class="string">"张三"</span>))&#123;</div><div class="line">				System.out.println(<span class="string">"张三年龄20"</span>);</div><div class="line">				getSex(username);</div><div class="line">			&#125;<span class="keyword">else</span>&#123;</div><div class="line">				System.out.println(<span class="string">"李四年龄30"</span>);</div><div class="line">				getSex(username);</div><div class="line">			&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title">getSex</span><span class="params">(String username)</span></span>&#123;</div><div class="line">			<span class="keyword">if</span>(username.equals(<span class="string">"张三"</span>))&#123;</div><div class="line">				System.out.println(<span class="string">"张三性别男！"</span>);</div><div class="line">			&#125;<span class="keyword">else</span>&#123;</div><div class="line">				System.out.println(<span class="string">"李四性别女！"</span>);</div><div class="line">			&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyThread1</span> <span class="keyword">extends</span> <span class="title">Thread</span></span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> Service service;</div><div class="line">    <span class="keyword">private</span> String username;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyThread1</span><span class="params">(Service service ,String username)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>();</div><div class="line">        <span class="keyword">this</span>.service = service;</div><div class="line">        <span class="keyword">this</span>.username=username;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</div><div class="line">        service.getAge(username);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line"></div><div class="line">        Service service=<span class="keyword">new</span> Service();</div><div class="line">        MyThread1 myThread1=<span class="keyword">new</span> MyThread1(service,<span class="string">"张三"</span>);</div><div class="line">        myThread1.start();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>结果：<br>张三年龄20<br>张三性别男！</p>
+<p>—-1.4.1总结：</p>
+<p>锁的重入也可用于父子类继承的环境中。子类完全可以通过锁的重入带哦用父类的同步方法</p>
+<h3 id="1-5出现异常，锁自动释放"><a href="#1-5出现异常，锁自动释放" class="headerlink" title="1.5出现异常，锁自动释放"></a>1.5出现异常，锁自动释放</h3><p>解释：<strong>如果当前线程执行代码时出现了异常，那么当前线程所持有的锁也将会自动释放。</strong></p>
+<h3 id="1-6同步不具有继承性"><a href="#1-6同步不具有继承性" class="headerlink" title="1.6同步不具有继承性"></a>1.6同步不具有继承性</h3><p>解释：<strong>同步不可以继承，虽然父类声明了同步方法，但是子类重写父类的方法不具有同步的性质。</strong></p>
+
       
 
       
@@ -420,7 +547,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">diary</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">JAVA</a>
         		</li>
       		
 		</ul>
@@ -430,7 +557,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/10/10-10/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/02/27/JAVA/JAVA 对象及变量的并发访问/">展开全文 >></a>
         </p>
       
 
@@ -460,29 +587,29 @@
 
 
   
-    <article id="post-10-08" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-2-21" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/09/10-08/">10-09</a>
+      <a class="article-title" href="/2018/02/21/2-21/">2018规划</a>
     </h1>
   
 
         
-        <a href="/2017/10/09/10-08/" class="archive-article-date">
-  	<time datetime="2017-10-08T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-09</time>
+        <a href="/2018/02/21/2-21/" class="archive-article-date">
+  	<time datetime="2018-02-20T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>对于diary，我们往往希望它是结构良好，内容清晰的。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。<br>
+        <p>plannin,有节奏，有思想，有热度的去过生活。懂得去争取，追求，相信会越来越好 — 致来年的自己<br>
         
-          <a class="article-more-a" href="/2017/10/09/10-08/#more">more >></a>
+          <a class="article-more-a" href="/2018/02/21/2-21/#more">more >></a>
         
       
 
@@ -496,7 +623,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">diary</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">planning</a>
         		</li>
       		
 		</ul>
@@ -506,7 +633,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/09/10-08/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/02/21/2-21/">展开全文 >></a>
         </p>
       
 
@@ -536,20 +663,20 @@
 
 
   
-    <article id="post-9-29" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-1-09" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/29/9-29/">09-29</a>
+      <a class="article-title" href="/2018/01/09/1-09/">1-09</a>
     </h1>
   
 
         
-        <a href="/2017/09/29/9-29/" class="archive-article-date">
-  	<time datetime="2017-09-28T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-29</time>
+        <a href="/2018/01/09/1-09/" class="archive-article-date">
+  	<time datetime="2018-01-08T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-09</time>
 </a>
         
       </header>
@@ -558,7 +685,7 @@
       
         <p>对于diary，我们往往希望它是结构良好，内容清晰的。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。<br>
         
-          <a class="article-more-a" href="/2017/09/29/9-29/#more">more >></a>
+          <a class="article-more-a" href="/2018/01/09/1-09/#more">more >></a>
         
       
 
@@ -582,7 +709,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/29/9-29/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/01/09/1-09/">展开全文 >></a>
         </p>
       
 
@@ -612,20 +739,20 @@
 
 
   
-    <article id="post-9-28" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-12-25" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/28/9-28/">09-28</a>
+      <a class="article-title" href="/2017/12/25/12-25/">12-25</a>
     </h1>
   
 
         
-        <a href="/2017/09/28/9-28/" class="archive-article-date">
-  	<time datetime="2017-09-27T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-28</time>
+        <a href="/2017/12/25/12-25/" class="archive-article-date">
+  	<time datetime="2017-12-24T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-25</time>
 </a>
         
       </header>
@@ -634,7 +761,7 @@
       
         <p>对于diary，我们往往希望它是结构良好，内容清晰的。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。<br>
         
-          <a class="article-more-a" href="/2017/09/28/9-28/#more">more >></a>
+          <a class="article-more-a" href="/2017/12/25/12-25/#more">more >></a>
         
       
 
@@ -658,7 +785,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/28/9-28/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/12/25/12-25/">展开全文 >></a>
         </p>
       
 
@@ -688,20 +815,20 @@
 
 
   
-    <article id="post-9-26" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-12-19" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/26/9-26/">09-26</a>
+      <a class="article-title" href="/2017/12/19/12-19/">12-19</a>
     </h1>
   
 
         
-        <a href="/2017/09/26/9-26/" class="archive-article-date">
-  	<time datetime="2017-09-25T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-26</time>
+        <a href="/2017/12/19/12-19/" class="archive-article-date">
+  	<time datetime="2017-12-18T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-19</time>
 </a>
         
       </header>
@@ -710,7 +837,7 @@
       
         <p>对于diary，我们往往希望它是结构良好，内容清晰的。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。<br>
         
-          <a class="article-more-a" href="/2017/09/26/9-26/#more">more >></a>
+          <a class="article-more-a" href="/2017/12/19/12-19/#more">more >></a>
         
       
 
@@ -734,7 +861,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/26/9-26/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/12/19/12-19/">展开全文 >></a>
         </p>
       
 
@@ -764,20 +891,20 @@
 
 
   
-    <article id="post-9-25" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-12-6" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/25/9-25/">09-25</a>
+      <a class="article-title" href="/2017/12/06/12-6/">12-6</a>
     </h1>
   
 
         
-        <a href="/2017/09/25/9-25/" class="archive-article-date">
-  	<time datetime="2017-09-24T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-25</time>
+        <a href="/2017/12/06/12-6/" class="archive-article-date">
+  	<time datetime="2017-12-05T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-06</time>
 </a>
         
       </header>
@@ -786,7 +913,7 @@
       
         <p>对于diary，我们往往希望它是结构良好，内容清晰的。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。<br>
         
-          <a class="article-more-a" href="/2017/09/25/9-25/#more">more >></a>
+          <a class="article-more-a" href="/2017/12/06/12-6/#more">more >></a>
         
       
 
@@ -810,7 +937,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/25/9-25/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/12/06/12-6/">展开全文 >></a>
         </p>
       
 
@@ -840,20 +967,20 @@
 
 
   
-    <article id="post-9-22" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-11-28" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/22/9-22/">09-22</a>
+      <a class="article-title" href="/2017/11/28/11-28/">11-28</a>
     </h1>
   
 
         
-        <a href="/2017/09/22/9-22/" class="archive-article-date">
-  	<time datetime="2017-09-21T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-22</time>
+        <a href="/2017/11/28/11-28/" class="archive-article-date">
+  	<time datetime="2017-11-27T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-28</time>
 </a>
         
       </header>
@@ -862,7 +989,7 @@
       
         <p>对于diary，我们往往希望它是结构良好，内容清晰的。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。<br>
         
-          <a class="article-more-a" href="/2017/09/22/9-22/#more">more >></a>
+          <a class="article-more-a" href="/2017/11/28/11-28/#more">more >></a>
         
       
 
@@ -886,7 +1013,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/22/9-22/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/11/28/11-28/">展开全文 >></a>
         </p>
       
 
@@ -918,7 +1045,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/pageF/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/pageF/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/pageF/4/">4</a><a class="extend next" rel="next" href="/pageF/4/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/pageF/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/pageF/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/pageF/4/">4</a><a class="page-number" href="/pageF/5/">5</a><a class="page-number" href="/pageF/6/">6</a><a class="extend next" rel="next" href="/pageF/4/">Next &raquo;</a>
     </nav>
   
 
@@ -1022,6 +1149,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">OC</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">JAVA</a>
               </li>
             
             <div class="clearfix"></div>
