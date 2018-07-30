@@ -138,12 +138,12 @@
   
   <entry>
     <title>模版格式</title>
-    <link href="http://AndyYang.com/child/2018/09/12/10-30/"/>
-    <id>http://AndyYang.com/child/2018/09/12/10-30/</id>
+    <link href="http://AndyYang.com/child/2018/09/12/10-13/"/>
+    <id>http://AndyYang.com/child/2018/09/12/10-13/</id>
     <published>2018-09-11T16:00:00.000Z</published>
-    <updated>2017-11-01T08:15:45.000Z</updated>
+    <updated>2017-10-13T03:48:56.000Z</updated>
     
-    <content type="html"><![CDATA[<p>对于diary，我们往往希望它是结构良好，内容清晰的。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。<br><a id="more"></a></p><h2 id="待办事项"><a href="#待办事项" class="headerlink" title="待办事项"></a>待办事项</h2><ul><li style="list-style: none"><input type="checkbox"> PM</li><li style="list-style: none"><input type="checkbox"> ST</li><li style="list-style: none"><input type="checkbox"> AI</li><li style="list-style: none"><input type="checkbox"> ES</li><li style="list-style: none"><input type="checkbox"> MS</li><li style="list-style: none"><input type="checkbox"> other</li></ul><h2 id="PM"><a href="#PM" class="headerlink" title="PM"></a>PM</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1.信息梳理</div></pre></td></tr></table></figure><h2 id="AI"><a href="#AI" class="headerlink" title="AI"></a>AI</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1.前沿科技</div></pre></td></tr></table></figure><h2 id="ES"><a href="#ES" class="headerlink" title="ES"></a>ES</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1.direction</div></pre></td></tr></table></figure><h2 id="ST"><a href="#ST" class="headerlink" title="ST"></a>ST</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1.</div></pre></td></tr></table></figure><p>即在准确地观察某些特定行为或倾向之后，却对其动机的猜测完全错误，或者在没有任何东西的情况下，强行为这些行为或倾向赋予更深的含义或意图</p><p> 强大的人格<br>毫无疑问，成功的创业者知道如何脱离现状去独立思考 需要团队支持  企业家的成功没有可以真实推广的特性：大多数人的性格特征并没有足够大到可以进行推广的程度</p><p>当成功的创业者在面临风险时，他们通常会去评估推测这些风险，并重新审视自己决策，然后与其他的选择进行权衡。同样地，他们也会敏锐地意识到，领导能力不是他们自己独有的，是一种他们需要在整个领导团队中培养的技能，他们往往在不同的发展节点采取不同的形式<a href="http://www.woshipm.com/chuangye/834252.html" target="_blank" rel="external">链接</a></p><h2 id="MS"><a href="#MS" class="headerlink" title="MS"></a>MS</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1.</div></pre></td></tr></table></figure><p>A masked stranger makes you lie on the table, drugs you into unconsciousness, takes out a sharp knife and slices into your naked body. 人们总是按照心中最社会化（社会投射）去得出结论 ，在描述，在揭露事实的时候 已经经过了自己的一层筛选，已经修饰，那么这个事实还是事实本身，还是就是事实需要通过社会化的方式去传播的形式</p><p>这就是生活态度带给人类的可怕的潜意识</p>]]></content>
+    <content type="html"><![CDATA[<p>对于diary，我们往往希望它是结构良好，内容清晰的。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。<br><a id="more"></a></p><h2 id="待办事项"><a href="#待办事项" class="headerlink" title="待办事项"></a>待办事项</h2><ul><li style="list-style: none"><input type="checkbox"> PM</li><li style="list-style: none"><input type="checkbox"> ST</li><li style="list-style: none"><input type="checkbox"> AI</li><li style="list-style: none"><input type="checkbox"> ES</li><li style="list-style: none"><input type="checkbox"> MS</li><li style="list-style: none"><input type="checkbox"> other</li></ul><h2 id="PM"><a href="#PM" class="headerlink" title="PM"></a>PM</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">1.信息梳理</div><div class="line">``` </div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">## AI</span></div><div class="line">``` bash</div><div class="line">1.前沿科技</div><div class="line">``` </div><div class="line"></div><div class="line"><span class="comment">## ES</span></div><div class="line">``` bash</div><div class="line">1.direction</div><div class="line">``` </div><div class="line"></div><div class="line"><span class="comment">## ST</span></div><div class="line">``` bash</div><div class="line">1.</div></pre></td></tr></table></figure><p>组件化：业务组件之间不能有依赖关系，这是公认的的原则。否则就失去了组件化开发的核心价值</p><blockquote><ul><li>业务组件之间不能有依赖关系 </li><li>按照图示不能跨层依赖。</li><li>所谓弱业务组件就是包含着少部分业务，并且可以在这个App内的各个业务组件之间重用的代码(样式图片展示)，弱业务组件的生命周期由创建它的对象来管理。按需创建和ARC自动释放。</li></ul></blockquote><p>组件管理<br>ios gitlab-runner 单元化测试（Kiwi） 管理<br>自动编译，打包 ，上传</p><h2 id="MS"><a href="#MS" class="headerlink" title="MS"></a>MS</h2><pre><code class="bash">1.</code></pre>]]></content>
     
     <summary type="html">
     
@@ -158,12 +158,12 @@
   
   <entry>
     <title>模版格式</title>
-    <link href="http://AndyYang.com/child/2018/09/12/10-13/"/>
-    <id>http://AndyYang.com/child/2018/09/12/10-13/</id>
+    <link href="http://AndyYang.com/child/2018/09/12/10-30/"/>
+    <id>http://AndyYang.com/child/2018/09/12/10-30/</id>
     <published>2018-09-11T16:00:00.000Z</published>
-    <updated>2017-10-13T03:48:56.000Z</updated>
+    <updated>2017-11-01T08:15:45.000Z</updated>
     
-    <content type="html"><![CDATA[<p>对于diary，我们往往希望它是结构良好，内容清晰的。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。<br><a id="more"></a></p><h2 id="待办事项"><a href="#待办事项" class="headerlink" title="待办事项"></a>待办事项</h2><ul><li style="list-style: none"><input type="checkbox"> PM</li><li style="list-style: none"><input type="checkbox"> ST</li><li style="list-style: none"><input type="checkbox"> AI</li><li style="list-style: none"><input type="checkbox"> ES</li><li style="list-style: none"><input type="checkbox"> MS</li><li style="list-style: none"><input type="checkbox"> other</li></ul><h2 id="PM"><a href="#PM" class="headerlink" title="PM"></a>PM</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">1.信息梳理</div><div class="line">``` </div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">## AI</span></div><div class="line">``` bash</div><div class="line">1.前沿科技</div><div class="line">``` </div><div class="line"></div><div class="line"><span class="comment">## ES</span></div><div class="line">``` bash</div><div class="line">1.direction</div><div class="line">``` </div><div class="line"></div><div class="line"><span class="comment">## ST</span></div><div class="line">``` bash</div><div class="line">1.</div></pre></td></tr></table></figure><p>组件化：业务组件之间不能有依赖关系，这是公认的的原则。否则就失去了组件化开发的核心价值</p><blockquote><ul><li>业务组件之间不能有依赖关系 </li><li>按照图示不能跨层依赖。</li><li>所谓弱业务组件就是包含着少部分业务，并且可以在这个App内的各个业务组件之间重用的代码(样式图片展示)，弱业务组件的生命周期由创建它的对象来管理。按需创建和ARC自动释放。</li></ul></blockquote><p>组件管理<br>ios gitlab-runner 单元化测试（Kiwi） 管理<br>自动编译，打包 ，上传</p><h2 id="MS"><a href="#MS" class="headerlink" title="MS"></a>MS</h2><pre><code class="bash">1.</code></pre>]]></content>
+    <content type="html"><![CDATA[<p>对于diary，我们往往希望它是结构良好，内容清晰的。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。<br><a id="more"></a></p><h2 id="待办事项"><a href="#待办事项" class="headerlink" title="待办事项"></a>待办事项</h2><ul><li style="list-style: none"><input type="checkbox"> PM</li><li style="list-style: none"><input type="checkbox"> ST</li><li style="list-style: none"><input type="checkbox"> AI</li><li style="list-style: none"><input type="checkbox"> ES</li><li style="list-style: none"><input type="checkbox"> MS</li><li style="list-style: none"><input type="checkbox"> other</li></ul><h2 id="PM"><a href="#PM" class="headerlink" title="PM"></a>PM</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1.信息梳理</div></pre></td></tr></table></figure><h2 id="AI"><a href="#AI" class="headerlink" title="AI"></a>AI</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1.前沿科技</div></pre></td></tr></table></figure><h2 id="ES"><a href="#ES" class="headerlink" title="ES"></a>ES</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1.direction</div></pre></td></tr></table></figure><h2 id="ST"><a href="#ST" class="headerlink" title="ST"></a>ST</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1.</div></pre></td></tr></table></figure><p>即在准确地观察某些特定行为或倾向之后，却对其动机的猜测完全错误，或者在没有任何东西的情况下，强行为这些行为或倾向赋予更深的含义或意图</p><p> 强大的人格<br>毫无疑问，成功的创业者知道如何脱离现状去独立思考 需要团队支持  企业家的成功没有可以真实推广的特性：大多数人的性格特征并没有足够大到可以进行推广的程度</p><p>当成功的创业者在面临风险时，他们通常会去评估推测这些风险，并重新审视自己决策，然后与其他的选择进行权衡。同样地，他们也会敏锐地意识到，领导能力不是他们自己独有的，是一种他们需要在整个领导团队中培养的技能，他们往往在不同的发展节点采取不同的形式<a href="http://www.woshipm.com/chuangye/834252.html" target="_blank" rel="external">链接</a></p><h2 id="MS"><a href="#MS" class="headerlink" title="MS"></a>MS</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1.</div></pre></td></tr></table></figure><p>A masked stranger makes you lie on the table, drugs you into unconsciousness, takes out a sharp knife and slices into your naked body. 人们总是按照心中最社会化（社会投射）去得出结论 ，在描述，在揭露事实的时候 已经经过了自己的一层筛选，已经修饰，那么这个事实还是事实本身，还是就是事实需要通过社会化的方式去传播的形式</p><p>这就是生活态度带给人类的可怕的潜意识</p>]]></content>
     
     <summary type="html">
     
@@ -193,6 +193,46 @@
     
     
       <category term="diary" scheme="http://AndyYang.com/child/tags/diary/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2-27</title>
+    <link href="http://AndyYang.com/child/2018/02/27/2-27/"/>
+    <id>http://AndyYang.com/child/2018/02/27/2-27/</id>
+    <published>2018-02-26T16:00:00.000Z</published>
+    <updated>2018-02-27T06:17:13.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>plannin,有节奏，有思想，有热度的去过生活。懂得去争取，追求，相信会越来越好 — 致来年的自己<br><a id="more"></a></p><h2 id="待办事项"><a href="#待办事项" class="headerlink" title="待办事项"></a>待办事项</h2><ul><li style="list-style: none"><input type="checkbox"> 个人健康</li><li style="list-style: none"><input type="checkbox"> 娱乐休闲</li><li style="list-style: none"><input type="checkbox"> 家庭生活</li><li style="list-style: none"><input type="checkbox"> 个人成长</li><li style="list-style: none"><input type="checkbox"> 自我实现</li><li style="list-style: none"><input type="checkbox"> 人际交往</li><li style="list-style: none"><input type="checkbox"> 职业发展</li><li style="list-style: none"><input type="checkbox"> 财务状况</li></ul><h2 id="PM"><a href="#PM" class="headerlink" title="PM"></a>PM</h2><pre><code class="bash">1.信息梳理</code></pre><h2 id="AI"><a href="#AI" class="headerlink" title="AI"></a>AI</h2><pre><code class="bash">1.前沿科技</code></pre><h2 id="ES"><a href="#ES" class="headerlink" title="ES"></a>ES</h2><pre><code class="bash">1.direction</code></pre><h2 id="ST"><a href="#ST" class="headerlink" title="ST"></a>ST</h2><pre><code class="bash">1.</code></pre><h2 id="MS"><a href="#MS" class="headerlink" title="MS"></a>MS</h2><pre><code class="bash">1.</code></pre><p>01.生活的意义：如心理学家弗洛伊德告诉我们，生命的意义就在于追求快乐，而阿德勒告诉我们，活着就是为了追求卓越。<br>维克多·弗兰克儿告诉我们，活着就是发现生命的意义，做出有价值的事，才不是虚度生命</p><p>02.如何理解生命的意义：活着，本身就是一件有意义的事。活好，体现生命才更有意义！<br>03.寻找生命的意义 1.工作，去做有价值的事 2.爱某个人或者体验某种生命3.用积极的态度去面对生活</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;plannin,有节奏，有思想，有热度的去过生活。懂得去争取，追求，相信会越来越好 — 致来年的自己&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="planning" scheme="http://AndyYang.com/child/tags/planning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2018规划</title>
+    <link href="http://AndyYang.com/child/2018/02/21/2-21/"/>
+    <id>http://AndyYang.com/child/2018/02/21/2-21/</id>
+    <published>2018-02-20T16:00:00.000Z</published>
+    <updated>2018-02-21T06:51:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>plannin,有节奏，有思想，有热度的去过生活。懂得去争取，追求，相信会越来越好 — 致来年的自己<br><a id="more"></a></p><h2 id="待办事项"><a href="#待办事项" class="headerlink" title="待办事项"></a>待办事项</h2><ul><li style="list-style: none"><input type="checkbox"> 个人健康</li><li style="list-style: none"><input type="checkbox"> 娱乐休闲</li><li style="list-style: none"><input type="checkbox"> 家庭生活</li><li style="list-style: none"><input type="checkbox"> 个人成长</li><li style="list-style: none"><input type="checkbox"> 自我实现</li><li style="list-style: none"><input type="checkbox"> 人际交往</li><li style="list-style: none"><input type="checkbox"> 职业发展</li><li style="list-style: none"><input type="checkbox"> 财务状况</li></ul><h2 id="PM"><a href="#PM" class="headerlink" title="PM"></a>PM</h2><pre><code class="bash">1.信息梳理</code></pre><h2 id="AI"><a href="#AI" class="headerlink" title="AI"></a>AI</h2><pre><code class="bash">1.前沿科技</code></pre><h2 id="ES"><a href="#ES" class="headerlink" title="ES"></a>ES</h2><pre><code class="bash">1.direction</code></pre><h2 id="ST"><a href="#ST" class="headerlink" title="ST"></a>ST</h2><pre><code class="bash">1.</code></pre><h2 id="MS"><a href="#MS" class="headerlink" title="MS"></a>MS</h2><pre><code class="bash">1.</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;plannin,有节奏，有思想，有热度的去过生活。懂得去争取，追求，相信会越来越好 — 致来年的自己&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="planning" scheme="http://AndyYang.com/child/tags/planning/"/>
     
   </entry>
   
@@ -578,12 +618,12 @@
   
   <entry>
     <title>09-20</title>
-    <link href="http://AndyYang.com/child/2017/09/20/9-20/"/>
-    <id>http://AndyYang.com/child/2017/09/20/9-20/</id>
+    <link href="http://AndyYang.com/child/2017/09/20/9-21/"/>
+    <id>http://AndyYang.com/child/2017/09/20/9-21/</id>
     <published>2017-09-19T16:00:00.000Z</published>
-    <updated>2017-09-21T01:27:32.000Z</updated>
+    <updated>2017-09-21T09:26:27.000Z</updated>
     
-    <content type="html"><![CDATA[<p>对于diary，我们往往希望它是结构良好，内容清晰的。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。<br><a id="more"></a></p><h2 id="待办事项"><a href="#待办事项" class="headerlink" title="待办事项"></a>待办事项</h2><ul><li style="list-style: none"><input type="checkbox"> 蓝牙技术匹配</li><li style="list-style: none"><input type="checkbox"> 项目</li><li style="list-style: none"><input type="checkbox"> arkit</li><li style="list-style: none"><input type="checkbox"> ES</li><li style="list-style: none"><input type="checkbox"> MS</li><li style="list-style: none"><input type="checkbox"> other</li></ul><h2 id="PM"><a href="#PM" class="headerlink" title="PM"></a>PM</h2><pre><code class="bash">1.信息梳理</code></pre><h2 id="AI"><a href="#AI" class="headerlink" title="AI"></a>AI</h2><pre><code class="bash">1.前沿科技</code></pre><h2 id="ES"><a href="#ES" class="headerlink" title="ES"></a>ES</h2><pre><code class="bash">1.direction</code></pre><h2 id="ST"><a href="#ST" class="headerlink" title="ST"></a>ST</h2><pre><code class="bash">1.</code></pre><h2 id="MS"><a href="#MS" class="headerlink" title="MS"></a>MS</h2><pre><code class="bash">1.</code></pre><p>1.项目瓶颈限制着发展  ，必须突破思维，定项目计划，超过2个小时解决不了，换一种思维方式，去尝试不同的场景，全方面完善自己<br>2.注重对于时间把控，节奏的把控</p>]]></content>
+    <content type="html"><![CDATA[<p>对于diary，我们往往希望它是结构良好，内容清晰的。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。<br><a id="more"></a></p><h2 id="待办事项"><a href="#待办事项" class="headerlink" title="待办事项"></a>待办事项</h2><ul><li style="list-style: none"><input type="checkbox"> 蓝牙技术匹配</li><li style="list-style: none"><input type="checkbox" checked> 项目</li><li style="list-style: none"><input type="checkbox"> arkit</li><li style="list-style: none"><input type="checkbox"> ES</li><li style="list-style: none"><input type="checkbox"> MS</li><li style="list-style: none"><input type="checkbox"> other</li></ul><h2 id="PM"><a href="#PM" class="headerlink" title="PM"></a>PM</h2><pre><code class="bash">1.信息梳理</code></pre><h2 id="AI"><a href="#AI" class="headerlink" title="AI"></a>AI</h2><pre><code class="bash">1.前沿科技</code></pre><h2 id="ES"><a href="#ES" class="headerlink" title="ES"></a>ES</h2><pre><code class="bash">1.direction</code></pre><h2 id="ST"><a href="#ST" class="headerlink" title="ST"></a>ST</h2><pre><code class="bash">1.</code></pre><h2 id="MS"><a href="#MS" class="headerlink" title="MS"></a>MS</h2><pre><code class="bash">1.</code></pre><p><a href="https://baijia.baidu.com/s?id=1579058091244871953&amp;wfr=pc&amp;fr=idx_lst" target="_blank" rel="external">今日头条</a><br>1.对于今日头条的内容思考：以智能算法匹配用户喜好，去分发内容，往往导致用户沉寂与低质，快消品内容，限制优质内容发展，在自己的思维的牢笼中悠然自得<br>当内容产出一切以用户喜好为标准，内容若要有市场就“就只能一味迎合、取悦”用户，进而“失去了独立思考、深度观察的能力，进而削弱整个社会的创造力”</p>]]></content>
     
     <summary type="html">
     
@@ -598,12 +638,12 @@
   
   <entry>
     <title>09-20</title>
-    <link href="http://AndyYang.com/child/2017/09/20/9-21/"/>
-    <id>http://AndyYang.com/child/2017/09/20/9-21/</id>
+    <link href="http://AndyYang.com/child/2017/09/20/9-20/"/>
+    <id>http://AndyYang.com/child/2017/09/20/9-20/</id>
     <published>2017-09-19T16:00:00.000Z</published>
-    <updated>2017-09-21T09:26:27.000Z</updated>
+    <updated>2017-09-21T01:27:32.000Z</updated>
     
-    <content type="html"><![CDATA[<p>对于diary，我们往往希望它是结构良好，内容清晰的。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。<br><a id="more"></a></p><h2 id="待办事项"><a href="#待办事项" class="headerlink" title="待办事项"></a>待办事项</h2><ul><li style="list-style: none"><input type="checkbox"> 蓝牙技术匹配</li><li style="list-style: none"><input type="checkbox" checked> 项目</li><li style="list-style: none"><input type="checkbox"> arkit</li><li style="list-style: none"><input type="checkbox"> ES</li><li style="list-style: none"><input type="checkbox"> MS</li><li style="list-style: none"><input type="checkbox"> other</li></ul><h2 id="PM"><a href="#PM" class="headerlink" title="PM"></a>PM</h2><pre><code class="bash">1.信息梳理</code></pre><h2 id="AI"><a href="#AI" class="headerlink" title="AI"></a>AI</h2><pre><code class="bash">1.前沿科技</code></pre><h2 id="ES"><a href="#ES" class="headerlink" title="ES"></a>ES</h2><pre><code class="bash">1.direction</code></pre><h2 id="ST"><a href="#ST" class="headerlink" title="ST"></a>ST</h2><pre><code class="bash">1.</code></pre><h2 id="MS"><a href="#MS" class="headerlink" title="MS"></a>MS</h2><pre><code class="bash">1.</code></pre><p><a href="https://baijia.baidu.com/s?id=1579058091244871953&amp;wfr=pc&amp;fr=idx_lst" target="_blank" rel="external">今日头条</a><br>1.对于今日头条的内容思考：以智能算法匹配用户喜好，去分发内容，往往导致用户沉寂与低质，快消品内容，限制优质内容发展，在自己的思维的牢笼中悠然自得<br>当内容产出一切以用户喜好为标准，内容若要有市场就“就只能一味迎合、取悦”用户，进而“失去了独立思考、深度观察的能力，进而削弱整个社会的创造力”</p>]]></content>
+    <content type="html"><![CDATA[<p>对于diary，我们往往希望它是结构良好，内容清晰的。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。<br><a id="more"></a></p><h2 id="待办事项"><a href="#待办事项" class="headerlink" title="待办事项"></a>待办事项</h2><ul><li style="list-style: none"><input type="checkbox"> 蓝牙技术匹配</li><li style="list-style: none"><input type="checkbox"> 项目</li><li style="list-style: none"><input type="checkbox"> arkit</li><li style="list-style: none"><input type="checkbox"> ES</li><li style="list-style: none"><input type="checkbox"> MS</li><li style="list-style: none"><input type="checkbox"> other</li></ul><h2 id="PM"><a href="#PM" class="headerlink" title="PM"></a>PM</h2><pre><code class="bash">1.信息梳理</code></pre><h2 id="AI"><a href="#AI" class="headerlink" title="AI"></a>AI</h2><pre><code class="bash">1.前沿科技</code></pre><h2 id="ES"><a href="#ES" class="headerlink" title="ES"></a>ES</h2><pre><code class="bash">1.direction</code></pre><h2 id="ST"><a href="#ST" class="headerlink" title="ST"></a>ST</h2><pre><code class="bash">1.</code></pre><h2 id="MS"><a href="#MS" class="headerlink" title="MS"></a>MS</h2><pre><code class="bash">1.</code></pre><p>1.项目瓶颈限制着发展  ，必须突破思维，定项目计划，超过2个小时解决不了，换一种思维方式，去尝试不同的场景，全方面完善自己<br>2.注重对于时间把控，节奏的把控</p>]]></content>
     
     <summary type="html">
     
